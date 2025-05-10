@@ -1,5 +1,7 @@
 onlyBuiltDependencies:
   - '@biomejs/biome'
+  - '@prisma/client'
   - '@prisma/engines'
+  - argon2
   - esbuild
   - prisma
