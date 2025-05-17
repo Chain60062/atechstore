@@ -1,0 +1,135 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  cpf              String    @id
+  nome             String
+  dataDeNascimento DateTime
+  order            Order[]
+  payment          Payment[]
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  review Review[]
+
+  @@map("users")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  title     String
+  message   String
+  rating    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User    @relation(fields: [userCPF], references: [cpf])
+  userCPF   String
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("reviews")
+}
+
+model Product {
+  id             Int      @id @default(autoincrement())
+  productName    String
+  price          Decimal
+  description    String?
+  sku            String?
+  availableUnits Int
+  slug           String
+  updatedAt      DateTime @updatedAt
+
+  category   Category? @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+  review     Review[]
+
+  @@map("products")
+}
+
+model Order {
+  id             Int      @id @default(autoincrement())
+  total          Decimal
+  shippingCost   Decimal
+  shippingMethod String
+  paymentMethod  String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  user              User    @relation(fields: [userCPF], references: [cpf])
+  userCPF           String
+  shippingAddress   Address @relation(fields: [shippingAddressId], references: [id])
+  shippingAddressId Int
+
+  @@map("orders")
+}
+
+model Address {
+  id                Int     @id @default(autoincrement())
+  cep               String
+  stateCode         String
+  city              String
+  neighborhood      String
+  street            String
+  number            Int
+  additionalDetails String?
+  Order             Order[]
+
+  @@map("addresses")
+}
+
+model Category {
+  id          Int     @id @default(autoincrement())
+  title       String
+  slug        String
+  description String?
+
+  products Product[]
+
+  @@map("categories")
+}
+
+model Payment {
+  id        Int           @id @default(autoincrement())
+  status    PaymentStatus
+  method    PaymentMethod @relation(fields: [methodId], references: [id])
+  methodId  Int
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String
+
+  @@map("payments")
+}
+
+model PaymentMethod {
+  id         Int    @id @default(autoincrement())
+  methodName String
+
+  payment Payment[]
+
+  @@map("payment_methods")
+}
+
+enum PaymentStatus {
+  NEW
+  PENDING
+  CANCELLED
+  DECLINED
+  SUCCESS
+}
