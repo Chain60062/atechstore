@@ -5,8 +5,9 @@
 // Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
 
 generator client {
-  provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  provider        = "prisma-client-js"
+  previewFeatures = ["strictUndefinedChecks"]
+  output          = "../generated/prisma"
 }
 
 datasource db {
@@ -18,12 +19,13 @@ model User {
   cpf              String    @id
   nome             String
   dataDeNascimento DateTime
-  order            Order[]
-  payment          Payment[]
+  orders           Order[]
+  payments         Payment[]
+  reviews          Review[]
+  addresses        Address[]
   createdAt        DateTime  @default(now())
   updatedAt        DateTime  @updatedAt
-
-  review Review[]
+  cart             Cart?
 
   @@map("users")
 }
@@ -51,31 +53,79 @@ model Product {
   description    String?
   sku            String?
   availableUnits Int
-  slug           String
+  slug           String   @unique
   updatedAt      DateTime @updatedAt
 
-  category   Category? @relation(fields: [categoryId], references: [id])
+  category   Category?   @relation(fields: [categoryId], references: [id])
   categoryId Int?
   review     Review[]
+  orderItem  OrderItem[]
+  cartItem   CartItem[]
+  images     File[]
 
   @@map("products")
 }
 
+model File {
+  id        Int      @id @default(autoincrement())
+  path      String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
+
+  @@map("files")
+}
+
 model Order {
-  id             Int      @id @default(autoincrement())
+  id             Int         @id @default(autoincrement())
   total          Decimal
   shippingCost   Decimal
   shippingMethod String
   paymentMethod  String
-  createdAt      DateTime @default(now())
-  updatedAt      DateTime @updatedAt
+  status         OrderStatus
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
 
-  user              User    @relation(fields: [userCPF], references: [cpf])
+  user              User        @relation(fields: [userCPF], references: [cpf])
   userCPF           String
-  shippingAddress   Address @relation(fields: [shippingAddressId], references: [id])
+  shippingAddress   Address     @relation(fields: [shippingAddressId], references: [id])
   shippingAddressId Int
+  orderItems        OrderItem[]
+  payment           Payment?    @relation(fields: [paymentId], references: [id])
+  paymentId         Int?
 
   @@map("orders")
+}
+
+model OrderItem {
+  id Int @id @default(autoincrement())
+
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("order_items")
+}
+
+model Cart {
+  id      Int    @id @default(autoincrement())
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String @unique
+
+  cartItems CartItem[]
+
+  @@map("carts")
+}
+
+model CartItem {
+  id        Int     @id @default(autoincrement())
+  cart      Cart    @relation(fields: [cartId], references: [id])
+  cartId    Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+  quantity  Int
+
+  @@map("cart_items")
 }
 
 model Address {
@@ -89,13 +139,16 @@ model Address {
   additionalDetails String?
   Order             Order[]
 
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String
+
   @@map("addresses")
 }
 
 model Category {
   id          Int     @id @default(autoincrement())
   title       String
-  slug        String
+  slug        String  @unique
   description String?
 
   products Product[]
@@ -104,15 +157,16 @@ model Category {
 }
 
 model Payment {
-  id        Int           @id @default(autoincrement())
-  status    PaymentStatus
-  method    PaymentMethod @relation(fields: [methodId], references: [id])
-  methodId  Int
-  createdAt DateTime      @default(now())
-  updatedAt DateTime      @updatedAt
+  id              Int           @id @default(autoincrement())
+  status          PaymentStatus
+  paymentMethod   PaymentMethod @relation(fields: [paymentmethodId], references: [id])
+  paymentmethodId Int           @unique
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
 
-  user    User   @relation(fields: [userCPF], references: [cpf])
+  user    User    @relation(fields: [userCPF], references: [cpf])
   userCPF String
+  Order   Order[]
 
   @@map("payments")
 }
@@ -121,7 +175,7 @@ model PaymentMethod {
   id         Int    @id @default(autoincrement())
   methodName String
 
-  payment Payment[]
+  payment Payment?
 
   @@map("payment_methods")
 }
@@ -132,4 +186,13 @@ enum PaymentStatus {
   CANCELLED
   DECLINED
   SUCCESS
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
 }

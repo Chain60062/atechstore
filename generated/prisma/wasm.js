@@ -108,6 +108,8 @@ Prisma.NullTypes = {
 }
 
 
+Prisma.skip = skip
+
 
 /**
  * Enums
@@ -151,16 +153,42 @@ exports.Prisma.ProductScalarFieldEnum = {
   categoryId: 'categoryId'
 };
 
+exports.Prisma.FileScalarFieldEnum = {
+  id: 'id',
+  path: 'path',
+  productId: 'productId'
+};
+
 exports.Prisma.OrderScalarFieldEnum = {
   id: 'id',
   total: 'total',
   shippingCost: 'shippingCost',
   shippingMethod: 'shippingMethod',
   paymentMethod: 'paymentMethod',
+  status: 'status',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   userCPF: 'userCPF',
-  shippingAddressId: 'shippingAddressId'
+  shippingAddressId: 'shippingAddressId',
+  paymentId: 'paymentId'
+};
+
+exports.Prisma.OrderItemScalarFieldEnum = {
+  id: 'id',
+  orderId: 'orderId',
+  productId: 'productId'
+};
+
+exports.Prisma.CartScalarFieldEnum = {
+  id: 'id',
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.CartItemScalarFieldEnum = {
+  id: 'id',
+  cartId: 'cartId',
+  productId: 'productId',
+  quantity: 'quantity'
 };
 
 exports.Prisma.AddressScalarFieldEnum = {
@@ -171,7 +199,8 @@ exports.Prisma.AddressScalarFieldEnum = {
   neighborhood: 'neighborhood',
   street: 'street',
   number: 'number',
-  additionalDetails: 'additionalDetails'
+  additionalDetails: 'additionalDetails',
+  userCPF: 'userCPF'
 };
 
 exports.Prisma.CategoryScalarFieldEnum = {
@@ -184,7 +213,7 @@ exports.Prisma.CategoryScalarFieldEnum = {
 exports.Prisma.PaymentScalarFieldEnum = {
   id: 'id',
   status: 'status',
-  methodId: 'methodId',
+  paymentmethodId: 'paymentmethodId',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   userCPF: 'userCPF'
@@ -209,6 +238,13 @@ exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
 };
+exports.OrderStatus = exports.$Enums.OrderStatus = {
+  PENDING: 'PENDING',
+  TRANSPORT: 'TRANSPORT',
+  DELIVERED: 'DELIVERED',
+  CANCELLED: 'CANCELLED'
+};
+
 exports.PaymentStatus = exports.$Enums.PaymentStatus = {
   NEW: 'NEW',
   PENDING: 'PENDING',
@@ -221,7 +257,11 @@ exports.Prisma.ModelName = {
   User: 'User',
   Review: 'Review',
   Product: 'Product',
+  File: 'File',
   Order: 'Order',
+  OrderItem: 'OrderItem',
+  Cart: 'Cart',
+  CartItem: 'CartItem',
   Address: 'Address',
   Category: 'Category',
   Payment: 'Payment',

@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { router as usersRouter } from "./users.js"
+import { router as usersRouter } from "./user.js"
 const router = Router()
 
 router.use("/api/users", usersRouter)
