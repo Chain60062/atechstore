@@ -169,12 +169,12 @@ exports.Prisma.OrderScalarFieldEnum = {
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   userCPF: 'userCPF',
-  shippingAddressId: 'shippingAddressId',
-  paymentId: 'paymentId'
+  shippingAddressId: 'shippingAddressId'
 };
 
 exports.Prisma.OrderItemScalarFieldEnum = {
   id: 'id',
+  quantity: 'quantity',
   orderId: 'orderId',
   productId: 'productId'
 };
@@ -186,9 +186,9 @@ exports.Prisma.CartScalarFieldEnum = {
 
 exports.Prisma.CartItemScalarFieldEnum = {
   id: 'id',
+  quantity: 'quantity',
   cartId: 'cartId',
-  productId: 'productId',
-  quantity: 'quantity'
+  productId: 'productId'
 };
 
 exports.Prisma.AddressScalarFieldEnum = {
@@ -213,15 +213,11 @@ exports.Prisma.CategoryScalarFieldEnum = {
 exports.Prisma.PaymentScalarFieldEnum = {
   id: 'id',
   status: 'status',
-  paymentmethodId: 'paymentmethodId',
+  paymentMethod: 'paymentMethod',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  userCPF: 'userCPF'
-};
-
-exports.Prisma.PaymentMethodScalarFieldEnum = {
-  id: 'id',
-  methodName: 'methodName'
+  userCPF: 'userCPF',
+  orderId: 'orderId'
 };
 
 exports.Prisma.SortOrder = {
@@ -240,9 +236,11 @@ exports.Prisma.NullsOrder = {
 };
 exports.OrderStatus = exports.$Enums.OrderStatus = {
   PENDING: 'PENDING',
-  TRANSPORT: 'TRANSPORT',
+  CONFIRMED: 'CONFIRMED',
+  SHIPPED: 'SHIPPED',
   DELIVERED: 'DELIVERED',
-  CANCELLED: 'CANCELLED'
+  CANCELLED: 'CANCELLED',
+  RETURNED: 'RETURNED'
 };
 
 exports.PaymentStatus = exports.$Enums.PaymentStatus = {
@@ -264,8 +262,7 @@ exports.Prisma.ModelName = {
   CartItem: 'CartItem',
   Address: 'Address',
   Category: 'Category',
-  Payment: 'Payment',
-  PaymentMethod: 'PaymentMethod'
+  Payment: 'Payment'
 };
 
 /**

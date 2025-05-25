@@ -1,0 +1,30 @@
+@baseUrl = http://localhost:3000/api/carts
+
+### Criar um carrinho(não é necessário, usuários quando criados já vem com um)
+POST {{baseUrl}}/
+Content-Type: application/json
+
+{
+  "userCPF": "12345678900"
+}
+
+### Buscar carrinho de um usuário pelo CPF
+GET {{baseUrl}}/user/12345678900
+
+### Buscar items pelo cartID
+GET {{baseUrl}}/items/1
+
+### Esvaziar carrinho pelo user CPF
+DELETE {{baseUrl}}/12345678900
+
+### Adicionar item ao carrinho
+POST {{baseUrl}}/12345678900/items
+Content-Type: application/json
+
+{
+  "productId": 5,
+  "quantity": 2
+}
+
+### Remover item do carrinho
+PATCH {{baseUrl}}/12345678900/items/1

@@ -43,7 +43,7 @@ export const createAddress = async (req: Request, res: Response) => {
 }
 
 export const updateAddress = async (req: Request, res: Response) => {
-    const addressId = Number(req.params.addressId);
+    const addressId = Number(req.params.id);
 
     if (isNaN(addressId)) {
         res.status(400).json({ error: 'ID de categoria inválido.' });
@@ -77,14 +77,14 @@ export const updateAddress = async (req: Request, res: Response) => {
 
 
 export const deleteAddress = async (req: Request, res: Response) => {
-    const addressId = Number(req.params.categoryId)
+    const addressId = Number(req.params.id)
 
     if (!addressId || isNaN(addressId)) {
         res.status(400).json({ error: 'ID de endereço inválido' })
         return
     }
 
-    prisma.address.delete({ where: { id: addressId } })
+    await prisma.address.delete({ where: { id: addressId } })
 
     res.status(200).json({ message: 'Endereço removido com sucesso' })
 }

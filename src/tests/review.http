@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000/api/reviews
+
+### Buscar todas as reviews de um produto
+GET {{baseUrl}}/product/1
+
+### Buscar todas as reviews de um usuário
+GET {{baseUrl}}/user/12345678900
+
+### Criar uma review
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "title": "Ótimo produto!",
+  "message": "Entrega rápida e qualidade excelente.",
+  "rating": 5,
+  "userCPF": "12345678900",
+  "productId": 5
+}
+
+### Atualizar uma review
+PUT {{baseUrl}}/3
+Content-Type: application/json
+
+{
+  "title": "Atualização da review",
+  "message": "Depois de um tempo, ainda muito bom!",
+  "rating": 4
+}
+
+### Deletar uma review
+DELETE {{baseUrl}}/1

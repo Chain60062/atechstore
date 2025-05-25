@@ -90,14 +90,14 @@ model Order {
   shippingAddress   Address     @relation(fields: [shippingAddressId], references: [id])
   shippingAddressId Int
   orderItems        OrderItem[]
-  payment           Payment?    @relation(fields: [paymentId], references: [id])
-  paymentId         Int?
+  payment           Payment?
 
   @@map("orders")
 }
 
 model OrderItem {
-  id Int @id @default(autoincrement())
+  id       Int @id @default(autoincrement())
+  quantity Int
 
   order     Order   @relation(fields: [orderId], references: [id])
   orderId   Int
@@ -118,12 +118,13 @@ model Cart {
 }
 
 model CartItem {
-  id        Int     @id @default(autoincrement())
+  id       Int @id @default(autoincrement())
+  quantity Int
+
   cart      Cart    @relation(fields: [cartId], references: [id])
   cartId    Int
   product   Product @relation(fields: [productId], references: [id])
   productId Int
-  quantity  Int
 
   @@map("cart_items")
 }
@@ -157,27 +158,18 @@ model Category {
 }
 
 model Payment {
-  id              Int           @id @default(autoincrement())
-  status          PaymentStatus
-  paymentMethod   PaymentMethod @relation(fields: [paymentmethodId], references: [id])
-  paymentmethodId Int           @unique
-  createdAt       DateTime      @default(now())
-  updatedAt       DateTime      @updatedAt
+  id            Int           @id @default(autoincrement())
+  status        PaymentStatus
+  paymentMethod String
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
 
-  user    User    @relation(fields: [userCPF], references: [cpf])
+  user    User   @relation(fields: [userCPF], references: [cpf])
   userCPF String
-  Order   Order[]
+  order   Order? @relation(fields: [orderId], references: [id])
+  orderId Int    @unique
 
   @@map("payments")
-}
-
-model PaymentMethod {
-  id         Int    @id @default(autoincrement())
-  methodName String
-
-  payment Payment?
-
-  @@map("payment_methods")
 }
 
 enum PaymentStatus {
@@ -190,7 +182,9 @@ enum PaymentStatus {
 
 enum OrderStatus {
   PENDING
-  TRANSPORT
+  CONFIRMED
+  SHIPPED
   DELIVERED
   CANCELLED
+  RETURNED
 }

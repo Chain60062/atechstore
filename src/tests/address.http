@@ -1,0 +1,41 @@
+@baseUrl = http://localhost:3000/api
+
+### Criar usuário (necessário para criação de endereços)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "cpf": "12345678910",
+  "nome": "Test",
+  "dataDeNascimento": "2002-03-24T00:00:00.000Z"
+}
+
+### Criar endereço
+POST {{baseUrl}}/addresses
+Content-Type: application/json
+
+{
+  "cep": "12345-678",
+  "stateCode": "SP",
+  "city": "São Paulo",
+  "neighborhood": "Centro",
+  "street": "Rua das Flores",
+  "number": 123,
+  "additionalDetails": "Apto 10",
+  "userCPF": "12345678910"
+}
+
+### Listar endereços de um usuário pelo CPF
+GET {{baseUrl}}/addresses/12345678910
+
+### Atualizar endereço pelo ID
+PUT {{baseUrl}}/addresses/1
+Content-Type: application/json
+
+{
+  "city": "Campinas",
+  "number": 456
+}
+
+### Delete address
+DELETE {{baseUrl}}/addresses/1

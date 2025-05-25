@@ -1,7 +1,6 @@
 import { prisma } from '../database/client.js'
 import { Request, Response } from 'express'
 
-
 //provavelmente nunca irá ser utilizada, pois o carrinho já é criado quando o usuario é registrado
 //mas está aqui para se ele for deletado
 export const createCart = async (req: Request, res: Response) => {
@@ -14,6 +13,38 @@ export const createCart = async (req: Request, res: Response) => {
     })
     res.status(201).json({ message: 'Carrinho criado com sucesso.' })
 }
+
+export const getCartByUserCpf = async (req: Request, res: Response) => {
+    const { userCpf } = req.params;
+
+    const cart = await prisma.cart.findUnique({
+        where: { userCPF: userCpf },
+        include: { cartItems: true }
+    });
+
+    if (!cart) {
+        res.status(404).json({ error: "Carrinho não encontrado para o usuário." });
+        return;
+    }
+
+    res.status(200).json(cart);
+};
+
+export const getCartItemsByCartId = async (req: Request, res: Response) => {
+    const cartId = Number(req.params.cartId);
+
+    if (isNaN(cartId)) {
+        res.status(400).json({ error: "ID de carrinho inválido." });
+        return;
+    }
+
+    const items = await prisma.cartItem.findMany({
+        where: { cartId },
+        include: { product: true }, // Optional: include product details
+    });
+
+    res.status(200).json(items);
+};
 
 export const emptyCart = async (req: Request, res: Response) => {
     const { userCPF } = req.params;
@@ -93,7 +124,8 @@ export const decrementQuantityOrRemoveCartItem = async (req: Request, res: Respo
     });
 
     if (!cart) {
-        return res.status(404).json({ message: 'Carrinho não encontrado.' });
+        res.status(404).json({ message: 'Carrinho não encontrado.' });
+        return
     }
 
     const item = await prisma.cartItem.findUnique({
@@ -101,7 +133,8 @@ export const decrementQuantityOrRemoveCartItem = async (req: Request, res: Respo
     });
 
     if (!item || item.cartId !== cart.id) {
-        return res.status(404).json({ message: 'Item não encontrado no carrinho' });
+        res.status(404).json({ message: 'Item não encontrado no carrinho' });
+        return
     }
 
     if (item.quantity > 1) {

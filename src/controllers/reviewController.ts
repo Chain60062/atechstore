@@ -1,89 +1,94 @@
 import { Request, Response } from "express"
-import { prisma } from '../database/client.js'
+import { prisma } from "../database/client.js"
 import { Prisma } from "../../generated/prisma/index.js"
 
-export const listUserReviewsByUserCpf = async (req: Request, res: Response) => {
-    const userCPF = req.params.userId
+export const listReviewsByProduct = async (req: Request, res: Response) => {
+    const productId = Number(req.params.productId)
+
+    if (isNaN(productId)) {
+        res.status(400).json({ error: "ID de produto inválido." })
+        return
+    }
+
+    const reviews = await prisma.review.findMany({
+        where: { productId },
+        orderBy: { createdAt: "desc" }
+    })
+
+    res.status(200).json(reviews)
+}
+
+export const listReviewsByUser = async (req: Request, res: Response) => {
+    const userCPF = req.params.userCpf
 
     const user = await prisma.user.findUnique({ where: { cpf: userCPF } })
     if (!user) {
-        res.status(404).json({ error: 'Usuário não encontrado' })
+        res.status(404).json({ error: "Usuário não encontrado." })
         return
     }
 
-    const addresses = await prisma.address.findMany({ where: { userCPF } })
-    if (!addresses) {
-        res.status(404).json({ error: 'Nenhum endereço encontrado.' })
-        return
-    }
-    res.status(200).json(addresses)
-}
-
-export const createAddress = async (req: Request, res: Response) => {
-    const { cep, stateCode, city, neighborhood, street, number, additionalDetails, userCPF } = req.body
-
-    if (isNaN(number)) {
-        res.status(400).json({ error: 'Número em formato incorreto' })
-        return
-    }
-    await prisma.address.create({
-        data: {
-            cep,
-            city,
-            stateCode,
-            neighborhood,
-            street,
-            number: Number(number),
-            additionalDetails,
-            userCPF
-        }
+    const reviews = await prisma.review.findMany({
+        where: { userCPF },
+        orderBy: { createdAt: "desc" }
     })
-    res.status(201).json({ message: 'Endereço criado com sucesso.' })
+
+    res.status(200).json(reviews)
 }
 
-export const updateAddress = async (req: Request, res: Response) => {
-    const addressId = Number(req.params.addressId);
+// POST /reviews
+export const createReview = async (req: Request, res: Response) => {
+    const { title, message, rating, userCPF, productId } = req.body
 
-    if (isNaN(addressId)) {
-        res.status(400).json({ error: 'ID de categoria inválido.' });
+    if (!title || !message || !rating || !userCPF || !productId) {
+        res.status(400).json({ error: "Campos obrigatórios ausentes." })
         return
     }
 
-    const { cep, stateCode, city, neighborhood, street, number, additionalDetails, userCPF } = req.body
-
-    //Prisma.skip é uma preview feature que substitui o undefined, serve para não atualizar campos
-    const updatedAddress = await prisma.address.update({
-        where: { id: addressId },
+    const review = await prisma.review.create({
         data: {
-            cep: cep ?? Prisma.skip,
-            stateCode: stateCode ?? Prisma.skip,
-            city: city ?? Prisma.skip,
-            neighborhood: neighborhood ?? Prisma.skip,
-            street: street ?? Prisma.skip,
-            number: number ?? Prisma.skip,
-            additionalDetails: additionalDetails ?? Prisma.skip,
-            userCPF: userCPF ?? Prisma.skip
-        }
-    });
+            title,
+            message,
+            rating,
+            userCPF,
+            productId
+        },
+    })
 
-    if (!updatedAddress) {
-        res.status(400).json({ error: 'Endereço não encontrado' })
+    res.status(201).json(review)
+}
+
+// PUT /reviews/:id
+export const updateReview = async (req: Request, res: Response) => {
+    const reviewId = Number(req.params.id)
+
+    if (isNaN(reviewId)) {
+        res.status(400).json({ error: "ID inválido." })
         return
     }
 
-    res.status(200).json(updatedAddress);
-};
+    const { title, message, rating } = req.body
 
+    const updated = await prisma.review.update({
+        where: { id: reviewId },
+        data: {
+            title: title ?? Prisma.skip,
+            message: message ?? Prisma.skip,
+            rating: rating ?? Prisma.skip
+        },
+    })
 
-export const deleteAddress = async (req: Request, res: Response) => {
-    const addressId = Number(req.params.categoryId)
+    res.status(200).json(updated)
+}
 
-    if (!addressId || isNaN(addressId)) {
-        res.status(400).json({ error: 'ID de endereço inválido' })
+export const deleteReview = async (req: Request, res: Response) => {
+    const reviewId = Number(req.params.id)
+
+    if (isNaN(reviewId)) {
+        res.status(400).json({ error: "ID inválido." })
         return
     }
 
-    prisma.address.delete({ where: { id: addressId } })
+    await prisma.review.delete({ where: { id: reviewId } })
 
-    res.status(200).json({ message: 'Endereço removido com sucesso' })
+    res.status(200).json({ message: "Review removido com sucesso." })
 }

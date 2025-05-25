@@ -17,10 +17,10 @@ export const listCategoryById = async (req: Request, res: Response) => {
     }
     const category = await prisma.category.findUnique({ where: { id: categoryId } })
     if (!category) {
-        res.status(404).json({ error: 'ID de categoria inválido.' })
+        res.status(404).json({ error: 'Categoria não encontrada.' })
         return
     }
-    return res.status(200).json(category)
+    res.status(200).json(category)
 }
 
 export const createCategory = async (req: Request, res: Response) => {
@@ -43,7 +43,8 @@ export const updateCategory = async (req: Request, res: Response) => {
     const categoryId = Number(req.params.categoryId);
 
     if (isNaN(categoryId)) {
-        return res.status(400).json({ error: 'ID de categoria inválido.' });
+        res.status(400).json({ error: 'ID de categoria inválido.' });
+        return
     }
 
     const { title, description } = req.body;
@@ -82,7 +83,7 @@ export const deleteCategory = async (req: Request, res: Response) => {
         return
     }
 
-    prisma.category.delete({ where: { id: categoryId } })
+    await prisma.category.delete({ where: { id: categoryId } })
 
     res.status(200).json({ message: 'Categoria removida com sucesso' })
 }

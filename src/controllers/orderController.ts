@@ -2,6 +2,77 @@ import { Request, Response } from "express"
 import { prisma } from '../database/client.js'
 import { Prisma, OrderStatus } from "../../generated/prisma/index.js";
 
+export const createOrderFromCart = async (req: Request, res: Response) => {
+    const { cpf } = req.params;
+    const { paymentMethod, shippingAddressId, shippingCost, shippingMethod } = req.body;
+
+    if (!paymentMethod || !shippingAddressId || !shippingCost || !shippingMethod) {
+        res.status(400).json({ message: 'Dados de envio ou pagamento ausentes.' });
+        return
+    }
+
+    const cart = await prisma.cart.findUnique({
+        where: { userCPF: cpf },
+        include: {
+            cartItems: {
+                include: {
+                    product: true,
+                },
+            },
+        },
+    });
+
+    if (!cart) {
+        res.status(404).json({ message: 'Carrinho não encontrado.' });
+        return;
+    }
+
+    if (cart.cartItems.length === 0) {
+        res.status(400).json({ message: 'Carrinho está vazio.' });
+        return;
+    }
+
+    const total = cart.cartItems.reduce((sum, item) => {
+        const itemTotal = item.product.price.mul(item.quantity);
+        return sum.add(itemTotal);
+    }, new Prisma.Decimal(0));
+
+    const order = await prisma.$transaction(async (tx) => {
+        const newOrder = await tx.order.create({
+            data: {
+                userCPF: cpf,
+                total,
+                paymentMethod,
+                shippingMethod,
+                shippingAddressId,
+                shippingCost,
+                status: OrderStatus.PENDING,
+                orderItems: {
+                    create: cart.cartItems.map(item => ({
+                        productId: item.productId,
+                        quantity: item.quantity,
+                    })),
+                },
+            },
+            include: {
+                orderItems: {
+                    include: {
+                        product: true,
+                    },
+                },
+            },
+        });
+
+        await tx.cartItem.deleteMany({
+            where: { cartId: cart.id },
+        });
+
+        return newOrder;
+    });
+
+    res.status(201).json(order);
+};
+
 export const listAllUserOrders = async (req: Request, res: Response) => {
     const userCPF = req.params.userCPF;
 
@@ -19,7 +90,7 @@ export const listAllUserOrders = async (req: Request, res: Response) => {
 
     //não possuir nenhum pedido não é necessariamente um erro, então array vazio parece adequado
     if (userWithOrders.orders.length === 0) {
-        res.status(204).json([])
+        res.status(204).send()
         return
     }
 
@@ -47,81 +118,19 @@ export const listAllOrderItems = async (req: Request, res: Response) => {
     }
 
     if (order.orderItems.length === 0) {
-        res.status(204).json([]);
+        res.status(204).send();
         return
     }
 
     res.status(200).json(order.orderItems);
 };
 
-export const createOrderFromCart = async (req: Request, res: Response) => {
-    const { cpf } = req.params;
-    const { paymentMethod, shippingAddressId, shippingCost, shippingMethod } = req.body
-
-    const cart = await prisma.cart.findUnique({
-        where: { userCPF: cpf },
-        include: {
-            cartItems: {
-                include: {
-                    product: true, // <-- get product and its price
-                },
-            },
-        },
-    });
-
-    if (!cart) {
-        return res.status(404).json({ message: 'Cart not found' });
-    }
-
-    if (cart.cartItems.length === 0) {
-        return res.status(400).json({ message: 'Cart is empty' });
-    }
-    //calcular o total
-    const total = cart.cartItems.reduce((sum, item) => {
-        const itemTotal = item.product.price.mul(item.quantity);
-        return sum.add(itemTotal);
-    }, new Prisma.Decimal(0));
-
-    const order = await prisma.$transaction(async (tx) => {
-        const newOrder = await tx.order.create({
-            data: {
-                userCPF: cpf,
-                total,
-                paymentMethod,
-                shippingMethod,
-                shippingAddressId,
-                shippingCost,
-                orderItems: {
-                    create: cart.cartItems.map(item => ({
-                        productId: item.productId,
-                        quantity: item.quantity,
-                    })),
-                },
-            },
-            include: {
-                orderItems: {
-                    include: {
-                        product: true,
-                    },
-                },
-            },
-        });
-        //limpar o carrinho
-        await tx.cartItem.deleteMany({
-            where: { cartId: cart.id },
-        });
-
-        return newOrder;
-    });
-
-    res.status(201).json(order);
-};
-
 export const cancelOrder = async (req: Request, res: Response) => {
     const orderId = parseInt(req.params.orderId);
 
     if (isNaN(orderId)) {
-        return res.status(400).json({ message: 'Invalid order ID' });
+        res.status(400).json({ message: 'ID de pedido inválido.' });
+        return
     }
 
     const order = await prisma.order.findUnique({
@@ -129,15 +138,18 @@ export const cancelOrder = async (req: Request, res: Response) => {
     });
 
     if (!order) {
-        return res.status(404).json({ message: 'Order not found' });
+        res.status(404).json({ message: 'Pedido não encontrado.' });
+        return
     }
 
     if (order.status === OrderStatus.CANCELLED) {
-        return res.status(400).json({ message: 'Pedido já foi cancelado' });
+        res.status(400).json({ message: 'Pedido já cancelado.' });
+        return
     }
 
     if (order.status === OrderStatus.DELIVERED) {
-        return res.status(400).json({ message: '' });
+        res.status(400).json({ message: 'Pedido já entregue.' });
+        return
     }
 
     const cancelledOrder = await prisma.order.update({
@@ -146,7 +158,50 @@ export const cancelOrder = async (req: Request, res: Response) => {
     });
 
     res.status(200).json({
-        message: 'Order cancelled successfully',
+        message: 'Pedido cancelado com sucesso.',
         order: cancelledOrder,
     });
+};
+//calcular impacto total das vendas canceladas
+export const financialCancellationReport = async (req: Request, res: Response) => {
+    try {
+        const cancelledOrders = await prisma.order.findMany({
+            where: {
+                status: OrderStatus.CANCELLED,
+            },
+            select: {
+                id: true,
+                total: true,
+                shippingCost: true,
+                createdAt: true,
+            },
+        });
+
+        if (cancelledOrders.length === 0) {
+            res.status(200).json({
+                message: 'Nenhum pedido cancelado encontrado.',
+                totalImpacto: 0,
+                pedidos: [],
+            });
+            return;
+        }
+
+        const totalImpact = cancelledOrders.reduce((acc, order) => {
+            const impactoPedido = order.total.add(order.shippingCost);
+            return acc.add(impactoPedido);
+        }, new Prisma.Decimal(0));
+
+        res.status(200).json({
+            totalImpact: totalImpact.toFixed(2),
+            orders: cancelledOrders.map((order) => ({
+                id: order.id,
+                total: order.total.toFixed(2),
+                shippingCost: order.shippingCost.toFixed(2),
+                impacto: order.total.add(order.shippingCost).toFixed(2),
+                dataCancelamento: order.createdAt,
+            })),
+        });
+    } catch (error) {
+        res.status(500).json({ message: 'Erro ao gerar relatório financeiro.', error });
+    }
 };
