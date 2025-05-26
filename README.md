@@ -1,6 +1,9 @@
+Sistema de ecommerce feito em Node.js com utilização do Prisma ORM e PostgreSQL.
+A aplicação é uma API RESTful para uma loja de eletrônicos fictícia.
 
+# Requisitos
 
-
+## Requisitos Funcionais
 RF01 – O sistema deve permitir o cadastro de usuários, com CPF como identificador único.
 
 RF02 – O sistema deve permitir que o usuário consulte e gerencie seus endereços de entrega.
@@ -39,9 +42,12 @@ RF18 – O sistema deve permitir a consulta de todas as avaliações associadas 
 
 RF19 – O sistema deve permitir a atualização do status de um pedido (ex: PENDENTE, PAGO, CANCELADO, ENTREGUE).
 
-RF020: Gerar Relatório Financeiro de Pedidos Cancelados
+RF020 - O sistema deve gerar relatórios financeiros de pedidos cancelados
+
+RF021 - O sistema deve permitir o pagamento de pedidos em métodos diversos.
+
 ## Requisitos não funcionais
-RN  F01 – O sistema deve ser implementado como uma API RESTful.
+RNF01 – O sistema deve ser implementado como uma API RESTful.
 
 RNF02 – O sistema deve garantir a persistência dos dados em um banco de dados relacional ou NoSQL.
 
@@ -51,8 +57,7 @@ RNF04 – O sistema deve garantir a consistência dos dados através do uso de t
 
 RNF05 – O sistema deve estar estruturado de forma modular, com separação clara entre camadas.
 
-RNF06 – A API deve, no mínimo, ter validação básica para dados de entrada e retornar os códigos de status HTTP adequados (ex: 400, 404, 201).
-
+RNF06 – O sistema deve, no mínimo, ter validação básica para dados de entrada e retornar os códigos de status HTTP adequados (ex: 400, 404, 201).
 
 # BPMN
 ![BPMN](<diagram (1).svg>)
