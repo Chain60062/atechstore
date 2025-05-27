@@ -5,7 +5,7 @@ POST {{baseUrl}}/
 Content-Type: application/json
 
 {
-  "userCPF": "12345678900"
+  "userCPF": "12345678910"
 }
 
 ### Buscar carrinho de um usuário pelo CPF
@@ -18,11 +18,11 @@ GET {{baseUrl}}/items/1
 DELETE {{baseUrl}}/12345678900
 
 ### Adicionar item ao carrinho
-POST {{baseUrl}}/12345678900/items
+POST {{baseUrl}}/12345678910/items
 Content-Type: application/json
 
 {
-  "productId": 5,
+  "productId": 3,
   "quantity": 2
 }
 

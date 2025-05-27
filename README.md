@@ -1,4 +1,4 @@
-Sistema de ecommerce feito em Node.js com utilização do Prisma ORM e PostgreSQL.
+Sistema de ecommerce feito em Node.js com utilização do Prisma ORM utilizando MySQL.
 A aplicação é uma API RESTful para uma loja de eletrônicos fictícia.
 
 # Requisitos

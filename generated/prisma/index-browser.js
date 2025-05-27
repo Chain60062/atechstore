@@ -225,14 +225,62 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
+exports.Prisma.UserOrderByRelevanceFieldEnum = {
+  cpf: 'cpf',
+  nome: 'nome'
+};
+
+exports.Prisma.ReviewOrderByRelevanceFieldEnum = {
+  title: 'title',
+  message: 'message',
+  userCPF: 'userCPF'
 };
 
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
+};
+
+exports.Prisma.ProductOrderByRelevanceFieldEnum = {
+  productName: 'productName',
+  description: 'description',
+  sku: 'sku',
+  slug: 'slug'
+};
+
+exports.Prisma.FileOrderByRelevanceFieldEnum = {
+  path: 'path'
+};
+
+exports.Prisma.OrderOrderByRelevanceFieldEnum = {
+  shippingMethod: 'shippingMethod',
+  paymentMethod: 'paymentMethod',
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.CartOrderByRelevanceFieldEnum = {
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.AddressOrderByRelevanceFieldEnum = {
+  cep: 'cep',
+  stateCode: 'stateCode',
+  city: 'city',
+  neighborhood: 'neighborhood',
+  street: 'street',
+  additionalDetails: 'additionalDetails',
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.CategoryOrderByRelevanceFieldEnum = {
+  title: 'title',
+  slug: 'slug',
+  description: 'description'
+};
+
+exports.Prisma.PaymentOrderByRelevanceFieldEnum = {
+  paymentMethod: 'paymentMethod',
+  userCPF: 'userCPF'
 };
 exports.OrderStatus = exports.$Enums.OrderStatus = {
   PENDING: 'PENDING',

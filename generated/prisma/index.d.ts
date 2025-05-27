@@ -849,10 +849,6 @@ export namespace Prisma {
             args: Prisma.UserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
-          }
           delete: {
             args: Prisma.UserDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$UserPayload>
@@ -868,10 +864,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.UserUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
           }
           upsert: {
             args: Prisma.UserUpsertArgs<ExtArgs>
@@ -923,10 +915,6 @@ export namespace Prisma {
             args: Prisma.ReviewCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.ReviewCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>[]
-          }
           delete: {
             args: Prisma.ReviewDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ReviewPayload>
@@ -942,10 +930,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ReviewUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.ReviewUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ReviewPayload>[]
           }
           upsert: {
             args: Prisma.ReviewUpsertArgs<ExtArgs>
@@ -997,10 +981,6 @@ export namespace Prisma {
             args: Prisma.ProductCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.ProductCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>[]
-          }
           delete: {
             args: Prisma.ProductDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$ProductPayload>
@@ -1016,10 +996,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.ProductUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.ProductUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ProductPayload>[]
           }
           upsert: {
             args: Prisma.ProductUpsertArgs<ExtArgs>
@@ -1071,10 +1047,6 @@ export namespace Prisma {
             args: Prisma.FileCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.FileCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FilePayload>[]
-          }
           delete: {
             args: Prisma.FileDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$FilePayload>
@@ -1090,10 +1062,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.FileUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.FileUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$FilePayload>[]
           }
           upsert: {
             args: Prisma.FileUpsertArgs<ExtArgs>
@@ -1145,10 +1113,6 @@ export namespace Prisma {
             args: Prisma.OrderCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.OrderCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OrderPayload>[]
-          }
           delete: {
             args: Prisma.OrderDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$OrderPayload>
@@ -1164,10 +1128,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.OrderUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.OrderUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OrderPayload>[]
           }
           upsert: {
             args: Prisma.OrderUpsertArgs<ExtArgs>
@@ -1219,10 +1179,6 @@ export namespace Prisma {
             args: Prisma.OrderItemCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.OrderItemCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OrderItemPayload>[]
-          }
           delete: {
             args: Prisma.OrderItemDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$OrderItemPayload>
@@ -1238,10 +1194,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.OrderItemUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.OrderItemUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$OrderItemPayload>[]
           }
           upsert: {
             args: Prisma.OrderItemUpsertArgs<ExtArgs>
@@ -1293,10 +1245,6 @@ export namespace Prisma {
             args: Prisma.CartCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.CartCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CartPayload>[]
-          }
           delete: {
             args: Prisma.CartDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$CartPayload>
@@ -1312,10 +1260,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.CartUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.CartUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CartPayload>[]
           }
           upsert: {
             args: Prisma.CartUpsertArgs<ExtArgs>
@@ -1367,10 +1311,6 @@ export namespace Prisma {
             args: Prisma.CartItemCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.CartItemCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CartItemPayload>[]
-          }
           delete: {
             args: Prisma.CartItemDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$CartItemPayload>
@@ -1386,10 +1326,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.CartItemUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.CartItemUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CartItemPayload>[]
           }
           upsert: {
             args: Prisma.CartItemUpsertArgs<ExtArgs>
@@ -1441,10 +1377,6 @@ export namespace Prisma {
             args: Prisma.AddressCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.AddressCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AddressPayload>[]
-          }
           delete: {
             args: Prisma.AddressDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$AddressPayload>
@@ -1460,10 +1392,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.AddressUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.AddressUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$AddressPayload>[]
           }
           upsert: {
             args: Prisma.AddressUpsertArgs<ExtArgs>
@@ -1515,10 +1443,6 @@ export namespace Prisma {
             args: Prisma.CategoryCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.CategoryCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CategoryPayload>[]
-          }
           delete: {
             args: Prisma.CategoryDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$CategoryPayload>
@@ -1534,10 +1458,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.CategoryUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.CategoryUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$CategoryPayload>[]
           }
           upsert: {
             args: Prisma.CategoryUpsertArgs<ExtArgs>
@@ -1589,10 +1509,6 @@ export namespace Prisma {
             args: Prisma.PaymentCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
-          createManyAndReturn: {
-            args: Prisma.PaymentCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PaymentPayload>[]
-          }
           delete: {
             args: Prisma.PaymentDeleteArgs<ExtArgs>
             result: $Utils.PayloadToResult<Prisma.$PaymentPayload>
@@ -1608,10 +1524,6 @@ export namespace Prisma {
           updateMany: {
             args: Prisma.PaymentUpdateManyArgs<ExtArgs>
             result: BatchPayload
-          }
-          updateManyAndReturn: {
-            args: Prisma.PaymentUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$PaymentPayload>[]
           }
           upsert: {
             args: Prisma.PaymentUpsertArgs<ExtArgs>
@@ -2231,21 +2143,7 @@ export namespace Prisma {
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["user"]>
 
-  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    cpf?: boolean | $Types.Skip
-    nome?: boolean | $Types.Skip
-    dataDeNascimento?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-  }, ExtArgs["result"]["user"]>
 
-  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    cpf?: boolean | $Types.Skip
-    nome?: boolean | $Types.Skip
-    dataDeNascimento?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-  }, ExtArgs["result"]["user"]>
 
   export type UserSelectScalar = {
     cpf?: boolean | $Types.Skip
@@ -2264,8 +2162,6 @@ export namespace Prisma {
     cart?: boolean | User$cartArgs<ExtArgs> | $Types.Skip
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }
-  export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type UserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "User"
@@ -2400,30 +2296,6 @@ export namespace Prisma {
     createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Users and returns the data saved in the database.
-     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
-     * @example
-     * // Create many Users
-     * const user = await prisma.user.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Users and only return the `cpf`
-     * const userWithCpfOnly = await prisma.user.createManyAndReturn({
-     *   select: { cpf: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a User.
      * @param {UserDeleteArgs} args - Arguments to delete one User.
      * @example
@@ -2486,36 +2358,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Users and returns the data updated in the database.
-     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
-     * @example
-     * // Update many Users
-     * const user = await prisma.user.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Users and only return the `cpf`
-     * const userWithCpfOnly = await prisma.user.updateManyAndReturn({
-     *   select: { cpf: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one User.
@@ -2948,25 +2790,6 @@ export namespace Prisma {
   }
 
   /**
-   * User createManyAndReturn
-   */
-  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the User
-     */
-    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the User
-     */
-    omit?: UserOmit<ExtArgs> | null
-    /**
-     * The data used to create many Users.
-     */
-    data: UserCreateManyInput | UserCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-  }
-
-  /**
    * User update
    */
   export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -2996,32 +2819,6 @@ export namespace Prisma {
    * User updateMany
    */
   export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to update Users.
-     */
-    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
-    /**
-     * Filter which Users to update
-     */
-    where?: UserWhereInput | $Types.Skip
-    /**
-     * Limit how many Users to update.
-     */
-    limit?: number | $Types.Skip
-  }
-
-  /**
-   * User updateManyAndReturn
-   */
-  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the User
-     */
-    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the User
-     */
-    omit?: UserOmit<ExtArgs> | null
     /**
      * The data used to update Users.
      */
@@ -3470,31 +3267,7 @@ export namespace Prisma {
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["review"]>
 
-  export type ReviewSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    title?: boolean | $Types.Skip
-    message?: boolean | $Types.Skip
-    rating?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["review"]>
 
-  export type ReviewSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    title?: boolean | $Types.Skip
-    message?: boolean | $Types.Skip
-    rating?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["review"]>
 
   export type ReviewSelectScalar = {
     id?: boolean | $Types.Skip
@@ -3509,14 +3282,6 @@ export namespace Prisma {
 
   export type ReviewOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "title" | "message" | "rating" | "createdAt" | "updatedAt" | "userCPF" | "productId", ExtArgs["result"]["review"], $Types.Skip>
   export type ReviewInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type ReviewIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type ReviewIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }
@@ -3654,30 +3419,6 @@ export namespace Prisma {
     createMany<T extends ReviewCreateManyArgs>(args?: SelectSubset<T, ReviewCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Reviews and returns the data saved in the database.
-     * @param {ReviewCreateManyAndReturnArgs} args - Arguments to create many Reviews.
-     * @example
-     * // Create many Reviews
-     * const review = await prisma.review.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Reviews and only return the `id`
-     * const reviewWithIdOnly = await prisma.review.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends ReviewCreateManyAndReturnArgs>(args?: SelectSubset<T, ReviewCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Review.
      * @param {ReviewDeleteArgs} args - Arguments to delete one Review.
      * @example
@@ -3740,36 +3481,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ReviewUpdateManyArgs>(args: SelectSubset<T, ReviewUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Reviews and returns the data updated in the database.
-     * @param {ReviewUpdateManyAndReturnArgs} args - Arguments to update many Reviews.
-     * @example
-     * // Update many Reviews
-     * const review = await prisma.review.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Reviews and only return the `id`
-     * const reviewWithIdOnly = await prisma.review.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends ReviewUpdateManyAndReturnArgs>(args: SelectSubset<T, ReviewUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ReviewPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Review.
@@ -4202,29 +3913,6 @@ export namespace Prisma {
   }
 
   /**
-   * Review createManyAndReturn
-   */
-  export type ReviewCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Review
-     */
-    select?: ReviewSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Review
-     */
-    omit?: ReviewOmit<ExtArgs> | null
-    /**
-     * The data used to create many Reviews.
-     */
-    data: ReviewCreateManyInput | ReviewCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ReviewIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Review update
    */
   export type ReviewUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4266,36 +3954,6 @@ export namespace Prisma {
      * Limit how many Reviews to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Review updateManyAndReturn
-   */
-  export type ReviewUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Review
-     */
-    select?: ReviewSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Review
-     */
-    omit?: ReviewOmit<ExtArgs> | null
-    /**
-     * The data used to update Reviews.
-     */
-    data: XOR<ReviewUpdateManyMutationInput, ReviewUncheckedUpdateManyInput>
-    /**
-     * Filter which Reviews to update
-     */
-    where?: ReviewWhereInput | $Types.Skip
-    /**
-     * Limit how many Reviews to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ReviewIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -4633,31 +4291,7 @@ export namespace Prisma {
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["product"]>
 
-  export type ProductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    productName?: boolean | $Types.Skip
-    price?: boolean | $Types.Skip
-    description?: boolean | $Types.Skip
-    sku?: boolean | $Types.Skip
-    availableUnits?: boolean | $Types.Skip
-    slug?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    categoryId?: boolean | $Types.Skip
-    category?: boolean | Product$categoryArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["product"]>
 
-  export type ProductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    productName?: boolean | $Types.Skip
-    price?: boolean | $Types.Skip
-    description?: boolean | $Types.Skip
-    sku?: boolean | $Types.Skip
-    availableUnits?: boolean | $Types.Skip
-    slug?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    categoryId?: boolean | $Types.Skip
-    category?: boolean | Product$categoryArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["product"]>
 
   export type ProductSelectScalar = {
     id?: boolean | $Types.Skip
@@ -4679,12 +4313,6 @@ export namespace Prisma {
     cartItem?: boolean | Product$cartItemArgs<ExtArgs> | $Types.Skip
     images?: boolean | Product$imagesArgs<ExtArgs> | $Types.Skip
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type ProductIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    category?: boolean | Product$categoryArgs<ExtArgs> | $Types.Skip
-  }
-  export type ProductIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    category?: boolean | Product$categoryArgs<ExtArgs> | $Types.Skip
   }
 
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -4824,30 +4452,6 @@ export namespace Prisma {
     createMany<T extends ProductCreateManyArgs>(args?: SelectSubset<T, ProductCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Products and returns the data saved in the database.
-     * @param {ProductCreateManyAndReturnArgs} args - Arguments to create many Products.
-     * @example
-     * // Create many Products
-     * const product = await prisma.product.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Products and only return the `id`
-     * const productWithIdOnly = await prisma.product.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends ProductCreateManyAndReturnArgs>(args?: SelectSubset<T, ProductCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Product.
      * @param {ProductDeleteArgs} args - Arguments to delete one Product.
      * @example
@@ -4910,36 +4514,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends ProductUpdateManyArgs>(args: SelectSubset<T, ProductUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Products and returns the data updated in the database.
-     * @param {ProductUpdateManyAndReturnArgs} args - Arguments to update many Products.
-     * @example
-     * // Update many Products
-     * const product = await prisma.product.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Products and only return the `id`
-     * const productWithIdOnly = await prisma.product.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends ProductUpdateManyAndReturnArgs>(args: SelectSubset<T, ProductUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Product.
@@ -5376,29 +4950,6 @@ export namespace Prisma {
   }
 
   /**
-   * Product createManyAndReturn
-   */
-  export type ProductCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Product
-     */
-    select?: ProductSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Product
-     */
-    omit?: ProductOmit<ExtArgs> | null
-    /**
-     * The data used to create many Products.
-     */
-    data: ProductCreateManyInput | ProductCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ProductIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Product update
    */
   export type ProductUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -5440,36 +4991,6 @@ export namespace Prisma {
      * Limit how many Products to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Product updateManyAndReturn
-   */
-  export type ProductUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Product
-     */
-    select?: ProductSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Product
-     */
-    omit?: ProductOmit<ExtArgs> | null
-    /**
-     * The data used to update Products.
-     */
-    data: XOR<ProductUpdateManyMutationInput, ProductUncheckedUpdateManyInput>
-    /**
-     * Filter which Products to update
-     */
-    where?: ProductWhereInput | $Types.Skip
-    /**
-     * Limit how many Products to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: ProductIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -5861,19 +5382,7 @@ export namespace Prisma {
     Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["file"]>
 
-  export type FileSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    path?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["file"]>
 
-  export type FileSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    path?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["file"]>
 
   export type FileSelectScalar = {
     id?: boolean | $Types.Skip
@@ -5883,12 +5392,6 @@ export namespace Prisma {
 
   export type FileOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "path" | "productId", ExtArgs["result"]["file"], $Types.Skip>
   export type FileInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
-  }
-  export type FileIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
-  }
-  export type FileIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     Product?: boolean | File$ProductArgs<ExtArgs> | $Types.Skip
   }
 
@@ -6019,30 +5522,6 @@ export namespace Prisma {
     createMany<T extends FileCreateManyArgs>(args?: SelectSubset<T, FileCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Files and returns the data saved in the database.
-     * @param {FileCreateManyAndReturnArgs} args - Arguments to create many Files.
-     * @example
-     * // Create many Files
-     * const file = await prisma.file.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Files and only return the `id`
-     * const fileWithIdOnly = await prisma.file.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends FileCreateManyAndReturnArgs>(args?: SelectSubset<T, FileCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FilePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a File.
      * @param {FileDeleteArgs} args - Arguments to delete one File.
      * @example
@@ -6105,36 +5584,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends FileUpdateManyArgs>(args: SelectSubset<T, FileUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Files and returns the data updated in the database.
-     * @param {FileUpdateManyAndReturnArgs} args - Arguments to update many Files.
-     * @example
-     * // Update many Files
-     * const file = await prisma.file.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Files and only return the `id`
-     * const fileWithIdOnly = await prisma.file.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends FileUpdateManyAndReturnArgs>(args: SelectSubset<T, FileUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$FilePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one File.
@@ -6561,29 +6010,6 @@ export namespace Prisma {
   }
 
   /**
-   * File createManyAndReturn
-   */
-  export type FileCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the File
-     */
-    select?: FileSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the File
-     */
-    omit?: FileOmit<ExtArgs> | null
-    /**
-     * The data used to create many Files.
-     */
-    data: FileCreateManyInput | FileCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FileIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * File update
    */
   export type FileUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -6625,36 +6051,6 @@ export namespace Prisma {
      * Limit how many Files to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * File updateManyAndReturn
-   */
-  export type FileUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the File
-     */
-    select?: FileSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the File
-     */
-    omit?: FileOmit<ExtArgs> | null
-    /**
-     * The data used to update Files.
-     */
-    data: XOR<FileUpdateManyMutationInput, FileUncheckedUpdateManyInput>
-    /**
-     * Filter which Files to update
-     */
-    where?: FileWhereInput | $Types.Skip
-    /**
-     * Limit how many Files to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: FileIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -7018,35 +6414,7 @@ export namespace Prisma {
     _count?: boolean | OrderCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["order"]>
 
-  export type OrderSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    total?: boolean | $Types.Skip
-    shippingCost?: boolean | $Types.Skip
-    shippingMethod?: boolean | $Types.Skip
-    paymentMethod?: boolean | $Types.Skip
-    status?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    shippingAddressId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    shippingAddress?: boolean | AddressDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["order"]>
 
-  export type OrderSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    total?: boolean | $Types.Skip
-    shippingCost?: boolean | $Types.Skip
-    shippingMethod?: boolean | $Types.Skip
-    paymentMethod?: boolean | $Types.Skip
-    status?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    shippingAddressId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    shippingAddress?: boolean | AddressDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["order"]>
 
   export type OrderSelectScalar = {
     id?: boolean | $Types.Skip
@@ -7068,14 +6436,6 @@ export namespace Prisma {
     orderItems?: boolean | Order$orderItemsArgs<ExtArgs> | $Types.Skip
     payment?: boolean | Order$paymentArgs<ExtArgs> | $Types.Skip
     _count?: boolean | OrderCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type OrderIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    shippingAddress?: boolean | AddressDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type OrderIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    shippingAddress?: boolean | AddressDefaultArgs<ExtArgs> | $Types.Skip
   }
 
   export type $OrderPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7215,30 +6575,6 @@ export namespace Prisma {
     createMany<T extends OrderCreateManyArgs>(args?: SelectSubset<T, OrderCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Orders and returns the data saved in the database.
-     * @param {OrderCreateManyAndReturnArgs} args - Arguments to create many Orders.
-     * @example
-     * // Create many Orders
-     * const order = await prisma.order.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Orders and only return the `id`
-     * const orderWithIdOnly = await prisma.order.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends OrderCreateManyAndReturnArgs>(args?: SelectSubset<T, OrderCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OrderPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Order.
      * @param {OrderDeleteArgs} args - Arguments to delete one Order.
      * @example
@@ -7301,36 +6637,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends OrderUpdateManyArgs>(args: SelectSubset<T, OrderUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Orders and returns the data updated in the database.
-     * @param {OrderUpdateManyAndReturnArgs} args - Arguments to update many Orders.
-     * @example
-     * // Update many Orders
-     * const order = await prisma.order.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Orders and only return the `id`
-     * const orderWithIdOnly = await prisma.order.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends OrderUpdateManyAndReturnArgs>(args: SelectSubset<T, OrderUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OrderPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Order.
@@ -7767,29 +7073,6 @@ export namespace Prisma {
   }
 
   /**
-   * Order createManyAndReturn
-   */
-  export type OrderCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Order
-     */
-    select?: OrderSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Order
-     */
-    omit?: OrderOmit<ExtArgs> | null
-    /**
-     * The data used to create many Orders.
-     */
-    data: OrderCreateManyInput | OrderCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OrderIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Order update
    */
   export type OrderUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -7831,36 +7114,6 @@ export namespace Prisma {
      * Limit how many Orders to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Order updateManyAndReturn
-   */
-  export type OrderUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Order
-     */
-    select?: OrderSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Order
-     */
-    omit?: OrderOmit<ExtArgs> | null
-    /**
-     * The data used to update Orders.
-     */
-    data: XOR<OrderUpdateManyMutationInput, OrderUncheckedUpdateManyInput>
-    /**
-     * Filter which Orders to update
-     */
-    where?: OrderWhereInput | $Types.Skip
-    /**
-     * Limit how many Orders to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OrderIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -8197,23 +7450,7 @@ export namespace Prisma {
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["orderItem"]>
 
-  export type OrderItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    quantity?: boolean | $Types.Skip
-    orderId?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    order?: boolean | OrderDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["orderItem"]>
 
-  export type OrderItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    quantity?: boolean | $Types.Skip
-    orderId?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    order?: boolean | OrderDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["orderItem"]>
 
   export type OrderItemSelectScalar = {
     id?: boolean | $Types.Skip
@@ -8224,14 +7461,6 @@ export namespace Prisma {
 
   export type OrderItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "quantity" | "orderId" | "productId", ExtArgs["result"]["orderItem"], $Types.Skip>
   export type OrderItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    order?: boolean | OrderDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type OrderItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    order?: boolean | OrderDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type OrderItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     order?: boolean | OrderDefaultArgs<ExtArgs> | $Types.Skip
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }
@@ -8365,30 +7594,6 @@ export namespace Prisma {
     createMany<T extends OrderItemCreateManyArgs>(args?: SelectSubset<T, OrderItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many OrderItems and returns the data saved in the database.
-     * @param {OrderItemCreateManyAndReturnArgs} args - Arguments to create many OrderItems.
-     * @example
-     * // Create many OrderItems
-     * const orderItem = await prisma.orderItem.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many OrderItems and only return the `id`
-     * const orderItemWithIdOnly = await prisma.orderItem.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends OrderItemCreateManyAndReturnArgs>(args?: SelectSubset<T, OrderItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OrderItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a OrderItem.
      * @param {OrderItemDeleteArgs} args - Arguments to delete one OrderItem.
      * @example
@@ -8451,36 +7656,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends OrderItemUpdateManyArgs>(args: SelectSubset<T, OrderItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more OrderItems and returns the data updated in the database.
-     * @param {OrderItemUpdateManyAndReturnArgs} args - Arguments to update many OrderItems.
-     * @example
-     * // Update many OrderItems
-     * const orderItem = await prisma.orderItem.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more OrderItems and only return the `id`
-     * const orderItemWithIdOnly = await prisma.orderItem.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends OrderItemUpdateManyAndReturnArgs>(args: SelectSubset<T, OrderItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$OrderItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one OrderItem.
@@ -8909,29 +8084,6 @@ export namespace Prisma {
   }
 
   /**
-   * OrderItem createManyAndReturn
-   */
-  export type OrderItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the OrderItem
-     */
-    select?: OrderItemSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the OrderItem
-     */
-    omit?: OrderItemOmit<ExtArgs> | null
-    /**
-     * The data used to create many OrderItems.
-     */
-    data: OrderItemCreateManyInput | OrderItemCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OrderItemIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * OrderItem update
    */
   export type OrderItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -8973,36 +8125,6 @@ export namespace Prisma {
      * Limit how many OrderItems to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * OrderItem updateManyAndReturn
-   */
-  export type OrderItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the OrderItem
-     */
-    select?: OrderItemSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the OrderItem
-     */
-    omit?: OrderItemOmit<ExtArgs> | null
-    /**
-     * The data used to update OrderItems.
-     */
-    data: XOR<OrderItemUpdateManyMutationInput, OrderItemUncheckedUpdateManyInput>
-    /**
-     * Filter which OrderItems to update
-     */
-    where?: OrderItemWhereInput | $Types.Skip
-    /**
-     * Limit how many OrderItems to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: OrderItemIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -9269,17 +8391,7 @@ export namespace Prisma {
     _count?: boolean | CartCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["cart"]>
 
-  export type CartSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["cart"]>
 
-  export type CartSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["cart"]>
 
   export type CartSelectScalar = {
     id?: boolean | $Types.Skip
@@ -9291,12 +8403,6 @@ export namespace Prisma {
     user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
     cartItems?: boolean | Cart$cartItemsArgs<ExtArgs> | $Types.Skip
     _count?: boolean | CartCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type CartIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type CartIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
   }
 
   export type $CartPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -9426,30 +8532,6 @@ export namespace Prisma {
     createMany<T extends CartCreateManyArgs>(args?: SelectSubset<T, CartCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Carts and returns the data saved in the database.
-     * @param {CartCreateManyAndReturnArgs} args - Arguments to create many Carts.
-     * @example
-     * // Create many Carts
-     * const cart = await prisma.cart.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Carts and only return the `id`
-     * const cartWithIdOnly = await prisma.cart.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends CartCreateManyAndReturnArgs>(args?: SelectSubset<T, CartCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CartPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Cart.
      * @param {CartDeleteArgs} args - Arguments to delete one Cart.
      * @example
@@ -9512,36 +8594,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends CartUpdateManyArgs>(args: SelectSubset<T, CartUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Carts and returns the data updated in the database.
-     * @param {CartUpdateManyAndReturnArgs} args - Arguments to update many Carts.
-     * @example
-     * // Update many Carts
-     * const cart = await prisma.cart.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Carts and only return the `id`
-     * const cartWithIdOnly = await prisma.cart.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends CartUpdateManyAndReturnArgs>(args: SelectSubset<T, CartUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CartPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Cart.
@@ -9968,29 +9020,6 @@ export namespace Prisma {
   }
 
   /**
-   * Cart createManyAndReturn
-   */
-  export type CartCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Cart
-     */
-    select?: CartSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Cart
-     */
-    omit?: CartOmit<ExtArgs> | null
-    /**
-     * The data used to create many Carts.
-     */
-    data: CartCreateManyInput | CartCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: CartIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Cart update
    */
   export type CartUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -10032,36 +9061,6 @@ export namespace Prisma {
      * Limit how many Carts to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Cart updateManyAndReturn
-   */
-  export type CartUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Cart
-     */
-    select?: CartSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Cart
-     */
-    omit?: CartOmit<ExtArgs> | null
-    /**
-     * The data used to update Carts.
-     */
-    data: XOR<CartUpdateManyMutationInput, CartUncheckedUpdateManyInput>
-    /**
-     * Filter which Carts to update
-     */
-    where?: CartWhereInput | $Types.Skip
-    /**
-     * Limit how many Carts to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: CartIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -10379,23 +9378,7 @@ export namespace Prisma {
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["cartItem"]>
 
-  export type CartItemSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    quantity?: boolean | $Types.Skip
-    cartId?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    cart?: boolean | CartDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["cartItem"]>
 
-  export type CartItemSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    quantity?: boolean | $Types.Skip
-    cartId?: boolean | $Types.Skip
-    productId?: boolean | $Types.Skip
-    cart?: boolean | CartDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["cartItem"]>
 
   export type CartItemSelectScalar = {
     id?: boolean | $Types.Skip
@@ -10406,14 +9389,6 @@ export namespace Prisma {
 
   export type CartItemOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "quantity" | "cartId" | "productId", ExtArgs["result"]["cartItem"], $Types.Skip>
   export type CartItemInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    cart?: boolean | CartDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type CartItemIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    cart?: boolean | CartDefaultArgs<ExtArgs> | $Types.Skip
-    product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type CartItemIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     cart?: boolean | CartDefaultArgs<ExtArgs> | $Types.Skip
     product?: boolean | ProductDefaultArgs<ExtArgs> | $Types.Skip
   }
@@ -10547,30 +9522,6 @@ export namespace Prisma {
     createMany<T extends CartItemCreateManyArgs>(args?: SelectSubset<T, CartItemCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many CartItems and returns the data saved in the database.
-     * @param {CartItemCreateManyAndReturnArgs} args - Arguments to create many CartItems.
-     * @example
-     * // Create many CartItems
-     * const cartItem = await prisma.cartItem.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many CartItems and only return the `id`
-     * const cartItemWithIdOnly = await prisma.cartItem.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends CartItemCreateManyAndReturnArgs>(args?: SelectSubset<T, CartItemCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CartItemPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a CartItem.
      * @param {CartItemDeleteArgs} args - Arguments to delete one CartItem.
      * @example
@@ -10633,36 +9584,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends CartItemUpdateManyArgs>(args: SelectSubset<T, CartItemUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more CartItems and returns the data updated in the database.
-     * @param {CartItemUpdateManyAndReturnArgs} args - Arguments to update many CartItems.
-     * @example
-     * // Update many CartItems
-     * const cartItem = await prisma.cartItem.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more CartItems and only return the `id`
-     * const cartItemWithIdOnly = await prisma.cartItem.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends CartItemUpdateManyAndReturnArgs>(args: SelectSubset<T, CartItemUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CartItemPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one CartItem.
@@ -11091,29 +10012,6 @@ export namespace Prisma {
   }
 
   /**
-   * CartItem createManyAndReturn
-   */
-  export type CartItemCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the CartItem
-     */
-    select?: CartItemSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the CartItem
-     */
-    omit?: CartItemOmit<ExtArgs> | null
-    /**
-     * The data used to create many CartItems.
-     */
-    data: CartItemCreateManyInput | CartItemCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: CartItemIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * CartItem update
    */
   export type CartItemUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -11155,36 +10053,6 @@ export namespace Prisma {
      * Limit how many CartItems to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * CartItem updateManyAndReturn
-   */
-  export type CartItemUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the CartItem
-     */
-    select?: CartItemSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the CartItem
-     */
-    omit?: CartItemOmit<ExtArgs> | null
-    /**
-     * The data used to update CartItems.
-     */
-    data: XOR<CartItemUpdateManyMutationInput, CartItemUncheckedUpdateManyInput>
-    /**
-     * Filter which CartItems to update
-     */
-    where?: CartItemWhereInput | $Types.Skip
-    /**
-     * Limit how many CartItems to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: CartItemIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -11511,31 +10379,7 @@ export namespace Prisma {
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["address"]>
 
-  export type AddressSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    cep?: boolean | $Types.Skip
-    stateCode?: boolean | $Types.Skip
-    city?: boolean | $Types.Skip
-    neighborhood?: boolean | $Types.Skip
-    street?: boolean | $Types.Skip
-    number?: boolean | $Types.Skip
-    additionalDetails?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["address"]>
 
-  export type AddressSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    cep?: boolean | $Types.Skip
-    stateCode?: boolean | $Types.Skip
-    city?: boolean | $Types.Skip
-    neighborhood?: boolean | $Types.Skip
-    street?: boolean | $Types.Skip
-    number?: boolean | $Types.Skip
-    additionalDetails?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["address"]>
 
   export type AddressSelectScalar = {
     id?: boolean | $Types.Skip
@@ -11554,12 +10398,6 @@ export namespace Prisma {
     Order?: boolean | Address$OrderArgs<ExtArgs> | $Types.Skip
     user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
     _count?: boolean | AddressCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type AddressIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-  }
-  export type AddressIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
   }
 
   export type $AddressPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -11696,30 +10534,6 @@ export namespace Prisma {
     createMany<T extends AddressCreateManyArgs>(args?: SelectSubset<T, AddressCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Addresses and returns the data saved in the database.
-     * @param {AddressCreateManyAndReturnArgs} args - Arguments to create many Addresses.
-     * @example
-     * // Create many Addresses
-     * const address = await prisma.address.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Addresses and only return the `id`
-     * const addressWithIdOnly = await prisma.address.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends AddressCreateManyAndReturnArgs>(args?: SelectSubset<T, AddressCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AddressPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Address.
      * @param {AddressDeleteArgs} args - Arguments to delete one Address.
      * @example
@@ -11782,36 +10596,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends AddressUpdateManyArgs>(args: SelectSubset<T, AddressUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Addresses and returns the data updated in the database.
-     * @param {AddressUpdateManyAndReturnArgs} args - Arguments to update many Addresses.
-     * @example
-     * // Update many Addresses
-     * const address = await prisma.address.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Addresses and only return the `id`
-     * const addressWithIdOnly = await prisma.address.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends AddressUpdateManyAndReturnArgs>(args: SelectSubset<T, AddressUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$AddressPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Address.
@@ -12245,29 +11029,6 @@ export namespace Prisma {
   }
 
   /**
-   * Address createManyAndReturn
-   */
-  export type AddressCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Address
-     */
-    select?: AddressSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Address
-     */
-    omit?: AddressOmit<ExtArgs> | null
-    /**
-     * The data used to create many Addresses.
-     */
-    data: AddressCreateManyInput | AddressCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: AddressIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Address update
    */
   export type AddressUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -12309,36 +11070,6 @@ export namespace Prisma {
      * Limit how many Addresses to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Address updateManyAndReturn
-   */
-  export type AddressUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Address
-     */
-    select?: AddressSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Address
-     */
-    omit?: AddressOmit<ExtArgs> | null
-    /**
-     * The data used to update Addresses.
-     */
-    data: XOR<AddressUpdateManyMutationInput, AddressUncheckedUpdateManyInput>
-    /**
-     * Filter which Addresses to update
-     */
-    where?: AddressWhereInput | $Types.Skip
-    /**
-     * Limit how many Addresses to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: AddressIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -12644,19 +11375,7 @@ export namespace Prisma {
     _count?: boolean | CategoryCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["category"]>
 
-  export type CategorySelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    title?: boolean | $Types.Skip
-    slug?: boolean | $Types.Skip
-    description?: boolean | $Types.Skip
-  }, ExtArgs["result"]["category"]>
 
-  export type CategorySelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    title?: boolean | $Types.Skip
-    slug?: boolean | $Types.Skip
-    description?: boolean | $Types.Skip
-  }, ExtArgs["result"]["category"]>
 
   export type CategorySelectScalar = {
     id?: boolean | $Types.Skip
@@ -12670,8 +11389,6 @@ export namespace Prisma {
     products?: boolean | Category$productsArgs<ExtArgs> | $Types.Skip
     _count?: boolean | CategoryCountOutputTypeDefaultArgs<ExtArgs> | $Types.Skip
   }
-  export type CategoryIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type CategoryIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
   export type $CategoryPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Category"
@@ -12801,30 +11518,6 @@ export namespace Prisma {
     createMany<T extends CategoryCreateManyArgs>(args?: SelectSubset<T, CategoryCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Categories and returns the data saved in the database.
-     * @param {CategoryCreateManyAndReturnArgs} args - Arguments to create many Categories.
-     * @example
-     * // Create many Categories
-     * const category = await prisma.category.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Categories and only return the `id`
-     * const categoryWithIdOnly = await prisma.category.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends CategoryCreateManyAndReturnArgs>(args?: SelectSubset<T, CategoryCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Category.
      * @param {CategoryDeleteArgs} args - Arguments to delete one Category.
      * @example
@@ -12887,36 +11580,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends CategoryUpdateManyArgs>(args: SelectSubset<T, CategoryUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Categories and returns the data updated in the database.
-     * @param {CategoryUpdateManyAndReturnArgs} args - Arguments to update many Categories.
-     * @example
-     * // Update many Categories
-     * const category = await prisma.category.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Categories and only return the `id`
-     * const categoryWithIdOnly = await prisma.category.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends CategoryUpdateManyAndReturnArgs>(args: SelectSubset<T, CategoryUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$CategoryPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Category.
@@ -13344,25 +12007,6 @@ export namespace Prisma {
   }
 
   /**
-   * Category createManyAndReturn
-   */
-  export type CategoryCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Category
-     */
-    select?: CategorySelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Category
-     */
-    omit?: CategoryOmit<ExtArgs> | null
-    /**
-     * The data used to create many Categories.
-     */
-    data: CategoryCreateManyInput | CategoryCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-  }
-
-  /**
    * Category update
    */
   export type CategoryUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -13392,32 +12036,6 @@ export namespace Prisma {
    * Category updateMany
    */
   export type CategoryUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * The data used to update Categories.
-     */
-    data: XOR<CategoryUpdateManyMutationInput, CategoryUncheckedUpdateManyInput>
-    /**
-     * Filter which Categories to update
-     */
-    where?: CategoryWhereInput | $Types.Skip
-    /**
-     * Limit how many Categories to update.
-     */
-    limit?: number | $Types.Skip
-  }
-
-  /**
-   * Category updateManyAndReturn
-   */
-  export type CategoryUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Category
-     */
-    select?: CategorySelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Category
-     */
-    omit?: CategoryOmit<ExtArgs> | null
     /**
      * The data used to update Categories.
      */
@@ -13763,29 +12381,7 @@ export namespace Prisma {
     order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
   }, ExtArgs["result"]["payment"]>
 
-  export type PaymentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    status?: boolean | $Types.Skip
-    paymentMethod?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    orderId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["payment"]>
 
-  export type PaymentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean | $Types.Skip
-    status?: boolean | $Types.Skip
-    paymentMethod?: boolean | $Types.Skip
-    createdAt?: boolean | $Types.Skip
-    updatedAt?: boolean | $Types.Skip
-    userCPF?: boolean | $Types.Skip
-    orderId?: boolean | $Types.Skip
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
-  }, ExtArgs["result"]["payment"]>
 
   export type PaymentSelectScalar = {
     id?: boolean | $Types.Skip
@@ -13799,14 +12395,6 @@ export namespace Prisma {
 
   export type PaymentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "status" | "paymentMethod" | "createdAt" | "updatedAt" | "userCPF" | "orderId", ExtArgs["result"]["payment"], $Types.Skip>
   export type PaymentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
-  }
-  export type PaymentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
-    order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
-  }
-  export type PaymentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs> | $Types.Skip
     order?: boolean | Payment$orderArgs<ExtArgs> | $Types.Skip
   }
@@ -13943,30 +12531,6 @@ export namespace Prisma {
     createMany<T extends PaymentCreateManyArgs>(args?: SelectSubset<T, PaymentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Payments and returns the data saved in the database.
-     * @param {PaymentCreateManyAndReturnArgs} args - Arguments to create many Payments.
-     * @example
-     * // Create many Payments
-     * const payment = await prisma.payment.createManyAndReturn({
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Create many Payments and only return the `id`
-     * const paymentWithIdOnly = await prisma.payment.createManyAndReturn({
-     *   select: { id: true },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    createManyAndReturn<T extends PaymentCreateManyAndReturnArgs>(args?: SelectSubset<T, PaymentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PaymentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
-
-    /**
      * Delete a Payment.
      * @param {PaymentDeleteArgs} args - Arguments to delete one Payment.
      * @example
@@ -14029,36 +12593,6 @@ export namespace Prisma {
      * 
      */
     updateMany<T extends PaymentUpdateManyArgs>(args: SelectSubset<T, PaymentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
-
-    /**
-     * Update zero or more Payments and returns the data updated in the database.
-     * @param {PaymentUpdateManyAndReturnArgs} args - Arguments to update many Payments.
-     * @example
-     * // Update many Payments
-     * const payment = await prisma.payment.updateManyAndReturn({
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * 
-     * // Update zero or more Payments and only return the `id`
-     * const paymentWithIdOnly = await prisma.payment.updateManyAndReturn({
-     *   select: { id: true },
-     *   where: {
-     *     // ... provide filter here
-     *   },
-     *   data: [
-     *     // ... provide data here
-     *   ]
-     * })
-     * Note, that providing `undefined` is treated as the value not being there.
-     * Read more here: https://pris.ly/d/null-undefined
-     * 
-     */
-    updateManyAndReturn<T extends PaymentUpdateManyAndReturnArgs>(args: SelectSubset<T, PaymentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$PaymentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
      * Create or update one Payment.
@@ -14490,29 +13024,6 @@ export namespace Prisma {
   }
 
   /**
-   * Payment createManyAndReturn
-   */
-  export type PaymentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Payment
-     */
-    select?: PaymentSelectCreateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Payment
-     */
-    omit?: PaymentOmit<ExtArgs> | null
-    /**
-     * The data used to create many Payments.
-     */
-    data: PaymentCreateManyInput | PaymentCreateManyInput[]
-    skipDuplicates?: boolean | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PaymentIncludeCreateManyAndReturn<ExtArgs> | null
-  }
-
-  /**
    * Payment update
    */
   export type PaymentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
@@ -14554,36 +13065,6 @@ export namespace Prisma {
      * Limit how many Payments to update.
      */
     limit?: number | $Types.Skip
-  }
-
-  /**
-   * Payment updateManyAndReturn
-   */
-  export type PaymentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    /**
-     * Select specific fields to fetch from the Payment
-     */
-    select?: PaymentSelectUpdateManyAndReturn<ExtArgs> | null
-    /**
-     * Omit specific fields from the Payment
-     */
-    omit?: PaymentOmit<ExtArgs> | null
-    /**
-     * The data used to update Payments.
-     */
-    data: XOR<PaymentUpdateManyMutationInput, PaymentUncheckedUpdateManyInput>
-    /**
-     * Filter which Payments to update
-     */
-    where?: PaymentWhereInput | $Types.Skip
-    /**
-     * Limit how many Payments to update.
-     */
-    limit?: number | $Types.Skip
-    /**
-     * Choose, which related nodes to fetch as well
-     */
-    include?: PaymentIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
@@ -14843,12 +13324,21 @@ export namespace Prisma {
   export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
 
 
-  export const QueryMode: {
-    default: 'default',
-    insensitive: 'insensitive'
+  export const UserOrderByRelevanceFieldEnum: {
+    cpf: 'cpf',
+    nome: 'nome'
   };
 
-  export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
+  export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum]
+
+
+  export const ReviewOrderByRelevanceFieldEnum: {
+    title: 'title',
+    message: 'message',
+    userCPF: 'userCPF'
+  };
+
+  export type ReviewOrderByRelevanceFieldEnum = (typeof ReviewOrderByRelevanceFieldEnum)[keyof typeof ReviewOrderByRelevanceFieldEnum]
 
 
   export const NullsOrder: {
@@ -14857,6 +13347,69 @@ export namespace Prisma {
   };
 
   export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
+
+
+  export const ProductOrderByRelevanceFieldEnum: {
+    productName: 'productName',
+    description: 'description',
+    sku: 'sku',
+    slug: 'slug'
+  };
+
+  export type ProductOrderByRelevanceFieldEnum = (typeof ProductOrderByRelevanceFieldEnum)[keyof typeof ProductOrderByRelevanceFieldEnum]
+
+
+  export const FileOrderByRelevanceFieldEnum: {
+    path: 'path'
+  };
+
+  export type FileOrderByRelevanceFieldEnum = (typeof FileOrderByRelevanceFieldEnum)[keyof typeof FileOrderByRelevanceFieldEnum]
+
+
+  export const OrderOrderByRelevanceFieldEnum: {
+    shippingMethod: 'shippingMethod',
+    paymentMethod: 'paymentMethod',
+    userCPF: 'userCPF'
+  };
+
+  export type OrderOrderByRelevanceFieldEnum = (typeof OrderOrderByRelevanceFieldEnum)[keyof typeof OrderOrderByRelevanceFieldEnum]
+
+
+  export const CartOrderByRelevanceFieldEnum: {
+    userCPF: 'userCPF'
+  };
+
+  export type CartOrderByRelevanceFieldEnum = (typeof CartOrderByRelevanceFieldEnum)[keyof typeof CartOrderByRelevanceFieldEnum]
+
+
+  export const AddressOrderByRelevanceFieldEnum: {
+    cep: 'cep',
+    stateCode: 'stateCode',
+    city: 'city',
+    neighborhood: 'neighborhood',
+    street: 'street',
+    additionalDetails: 'additionalDetails',
+    userCPF: 'userCPF'
+  };
+
+  export type AddressOrderByRelevanceFieldEnum = (typeof AddressOrderByRelevanceFieldEnum)[keyof typeof AddressOrderByRelevanceFieldEnum]
+
+
+  export const CategoryOrderByRelevanceFieldEnum: {
+    title: 'title',
+    slug: 'slug',
+    description: 'description'
+  };
+
+  export type CategoryOrderByRelevanceFieldEnum = (typeof CategoryOrderByRelevanceFieldEnum)[keyof typeof CategoryOrderByRelevanceFieldEnum]
+
+
+  export const PaymentOrderByRelevanceFieldEnum: {
+    paymentMethod: 'paymentMethod',
+    userCPF: 'userCPF'
+  };
+
+  export type PaymentOrderByRelevanceFieldEnum = (typeof PaymentOrderByRelevanceFieldEnum)[keyof typeof PaymentOrderByRelevanceFieldEnum]
 
 
   /**
@@ -14872,23 +13425,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'String[]'
-   */
-  export type ListStringFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'String[]'>
-    
-
-
-  /**
    * Reference to a field of type 'DateTime'
    */
   export type DateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime'>
-    
-
-
-  /**
-   * Reference to a field of type 'DateTime[]'
-   */
-  export type ListDateTimeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'DateTime[]'>
     
 
 
@@ -14900,23 +13439,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'Int[]'
-   */
-  export type ListIntFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Int[]'>
-    
-
-
-  /**
    * Reference to a field of type 'Decimal'
    */
   export type DecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal'>
-    
-
-
-  /**
-   * Reference to a field of type 'Decimal[]'
-   */
-  export type ListDecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal[]'>
     
 
 
@@ -14928,13 +13453,6 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'OrderStatus[]'
-   */
-  export type ListEnumOrderStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'OrderStatus[]'>
-    
-
-
-  /**
    * Reference to a field of type 'PaymentStatus'
    */
   export type EnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus'>
@@ -14942,23 +13460,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'PaymentStatus[]'
-   */
-  export type ListEnumPaymentStatusFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'PaymentStatus[]'>
-    
-
-
-  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
-    
-
-
-  /**
-   * Reference to a field of type 'Float[]'
-   */
-  export type ListFloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float[]'>
     
   /**
    * Deep Input Types
@@ -14992,6 +13496,7 @@ export namespace Prisma {
     reviews?: ReviewOrderByRelationAggregateInput | $Types.Skip
     addresses?: AddressOrderByRelationAggregateInput | $Types.Skip
     cart?: CartOrderByWithRelationInput | $Types.Skip
+    _relevance?: UserOrderByRelevanceInput | $Types.Skip
   }
 
   export type UserWhereUniqueInput = Prisma.AtLeast<{
@@ -15059,6 +13564,7 @@ export namespace Prisma {
     productId?: SortOrder | $Types.Skip
     user?: UserOrderByWithRelationInput | $Types.Skip
     product?: ProductOrderByWithRelationInput | $Types.Skip
+    _relevance?: ReviewOrderByRelevanceInput | $Types.Skip
   }
 
   export type ReviewWhereUniqueInput = Prisma.AtLeast<{
@@ -15142,6 +13648,7 @@ export namespace Prisma {
     orderItem?: OrderItemOrderByRelationAggregateInput | $Types.Skip
     cartItem?: CartItemOrderByRelationAggregateInput | $Types.Skip
     images?: FileOrderByRelationAggregateInput | $Types.Skip
+    _relevance?: ProductOrderByRelevanceInput | $Types.Skip
   }
 
   export type ProductWhereUniqueInput = Prisma.AtLeast<{
@@ -15211,6 +13718,7 @@ export namespace Prisma {
     path?: SortOrder | $Types.Skip
     productId?: SortOrderInput | SortOrder | $Types.Skip
     Product?: ProductOrderByWithRelationInput | $Types.Skip
+    _relevance?: FileOrderByRelevanceInput | $Types.Skip
   }
 
   export type FileWhereUniqueInput = Prisma.AtLeast<{
@@ -15278,6 +13786,7 @@ export namespace Prisma {
     shippingAddress?: AddressOrderByWithRelationInput | $Types.Skip
     orderItems?: OrderItemOrderByRelationAggregateInput | $Types.Skip
     payment?: PaymentOrderByWithRelationInput | $Types.Skip
+    _relevance?: OrderOrderByRelevanceInput | $Types.Skip
   }
 
   export type OrderWhereUniqueInput = Prisma.AtLeast<{
@@ -15404,6 +13913,7 @@ export namespace Prisma {
     userCPF?: SortOrder | $Types.Skip
     user?: UserOrderByWithRelationInput | $Types.Skip
     cartItems?: CartItemOrderByRelationAggregateInput | $Types.Skip
+    _relevance?: CartOrderByRelevanceInput | $Types.Skip
   }
 
   export type CartWhereUniqueInput = Prisma.AtLeast<{
@@ -15518,6 +14028,7 @@ export namespace Prisma {
     userCPF?: SortOrder | $Types.Skip
     Order?: OrderOrderByRelationAggregateInput | $Types.Skip
     user?: UserOrderByWithRelationInput | $Types.Skip
+    _relevance?: AddressOrderByRelevanceInput | $Types.Skip
   }
 
   export type AddressWhereUniqueInput = Prisma.AtLeast<{
@@ -15586,6 +14097,7 @@ export namespace Prisma {
     slug?: SortOrder | $Types.Skip
     description?: SortOrderInput | SortOrder | $Types.Skip
     products?: ProductOrderByRelationAggregateInput | $Types.Skip
+    _relevance?: CategoryOrderByRelevanceInput | $Types.Skip
   }
 
   export type CategoryWhereUniqueInput = Prisma.AtLeast<{
@@ -15646,6 +14158,7 @@ export namespace Prisma {
     orderId?: SortOrder | $Types.Skip
     user?: UserOrderByWithRelationInput | $Types.Skip
     order?: OrderOrderByWithRelationInput | $Types.Skip
+    _relevance?: PaymentOrderByRelevanceInput | $Types.Skip
   }
 
   export type PaymentWhereUniqueInput = Prisma.AtLeast<{
@@ -16392,8 +14905,8 @@ export namespace Prisma {
 
   export type StringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: string[] | $Types.Skip
+    notIn?: string[] | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16401,14 +14914,14 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    mode?: QueryMode | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringFilter<$PrismaModel> | string | $Types.Skip
   }
 
   export type DateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Date[] | string[] | $Types.Skip
+    notIn?: Date[] | string[] | $Types.Skip
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16461,6 +14974,12 @@ export namespace Prisma {
     _count?: SortOrder | $Types.Skip
   }
 
+  export type UserOrderByRelevanceInput = {
+    fields: UserOrderByRelevanceFieldEnum | UserOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
   export type UserCountOrderByAggregateInput = {
     cpf?: SortOrder | $Types.Skip
     nome?: SortOrder | $Types.Skip
@@ -16487,8 +15006,8 @@ export namespace Prisma {
 
   export type StringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: string[] | $Types.Skip
+    notIn?: string[] | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16496,7 +15015,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    mode?: QueryMode | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringWithAggregatesFilter<$PrismaModel> | string | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedStringFilter<$PrismaModel> | $Types.Skip
@@ -16505,8 +15024,8 @@ export namespace Prisma {
 
   export type DateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Date[] | string[] | $Types.Skip
+    notIn?: Date[] | string[] | $Types.Skip
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16519,8 +15038,8 @@ export namespace Prisma {
 
   export type IntFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: number[] | $Types.Skip
+    notIn?: number[] | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16536,6 +15055,12 @@ export namespace Prisma {
   export type ProductScalarRelationFilter = {
     is?: ProductWhereInput | $Types.Skip
     isNot?: ProductWhereInput | $Types.Skip
+  }
+
+  export type ReviewOrderByRelevanceInput = {
+    fields: ReviewOrderByRelevanceFieldEnum | ReviewOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type ReviewCountOrderByAggregateInput = {
@@ -16585,8 +15110,8 @@ export namespace Prisma {
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: number[] | $Types.Skip
+    notIn?: number[] | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16601,8 +15126,8 @@ export namespace Prisma {
 
   export type DecimalFilter<$PrismaModel = never> = {
     equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
     lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16612,8 +15137,8 @@ export namespace Prisma {
 
   export type StringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: string[] | null | $Types.Skip
+    notIn?: string[] | null | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16621,14 +15146,14 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    mode?: QueryMode | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringNullableFilter<$PrismaModel> | string | null | $Types.Skip
   }
 
   export type IntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: number[] | null | $Types.Skip
+    notIn?: number[] | null | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16674,6 +15199,12 @@ export namespace Prisma {
 
   export type FileOrderByRelationAggregateInput = {
     _count?: SortOrder | $Types.Skip
+  }
+
+  export type ProductOrderByRelevanceInput = {
+    fields: ProductOrderByRelevanceFieldEnum | ProductOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type ProductCountOrderByAggregateInput = {
@@ -16728,8 +15259,8 @@ export namespace Prisma {
 
   export type DecimalWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
     lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16744,8 +15275,8 @@ export namespace Prisma {
 
   export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: string[] | null | $Types.Skip
+    notIn?: string[] | null | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16753,7 +15284,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    mode?: QueryMode | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null | $Types.Skip
     _count?: NestedIntNullableFilter<$PrismaModel> | $Types.Skip
     _min?: NestedStringNullableFilter<$PrismaModel> | $Types.Skip
@@ -16762,8 +15293,8 @@ export namespace Prisma {
 
   export type IntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: number[] | null | $Types.Skip
+    notIn?: number[] | null | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -16779,6 +15310,12 @@ export namespace Prisma {
   export type ProductNullableScalarRelationFilter = {
     is?: ProductWhereInput | null | $Types.Skip
     isNot?: ProductWhereInput | null | $Types.Skip
+  }
+
+  export type FileOrderByRelevanceInput = {
+    fields: FileOrderByRelevanceFieldEnum | FileOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type FileCountOrderByAggregateInput = {
@@ -16811,8 +15348,8 @@ export namespace Prisma {
 
   export type EnumOrderStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.OrderStatus | EnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.OrderStatus[] | $Types.Skip
+    notIn?: $Enums.OrderStatus[] | $Types.Skip
     not?: NestedEnumOrderStatusFilter<$PrismaModel> | $Enums.OrderStatus | $Types.Skip
   }
 
@@ -16824,6 +15361,12 @@ export namespace Prisma {
   export type PaymentNullableScalarRelationFilter = {
     is?: PaymentWhereInput | null | $Types.Skip
     isNot?: PaymentWhereInput | null | $Types.Skip
+  }
+
+  export type OrderOrderByRelevanceInput = {
+    fields: OrderOrderByRelevanceFieldEnum | OrderOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type OrderCountOrderByAggregateInput = {
@@ -16881,8 +15424,8 @@ export namespace Prisma {
 
   export type EnumOrderStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.OrderStatus | EnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.OrderStatus[] | $Types.Skip
+    notIn?: $Enums.OrderStatus[] | $Types.Skip
     not?: NestedEnumOrderStatusWithAggregatesFilter<$PrismaModel> | $Enums.OrderStatus | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedEnumOrderStatusFilter<$PrismaModel> | $Types.Skip
@@ -16927,6 +15470,12 @@ export namespace Prisma {
     quantity?: SortOrder | $Types.Skip
     orderId?: SortOrder | $Types.Skip
     productId?: SortOrder | $Types.Skip
+  }
+
+  export type CartOrderByRelevanceInput = {
+    fields: CartOrderByRelevanceFieldEnum | CartOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type CartCountOrderByAggregateInput = {
@@ -16992,6 +15541,12 @@ export namespace Prisma {
     productId?: SortOrder | $Types.Skip
   }
 
+  export type AddressOrderByRelevanceInput = {
+    fields: AddressOrderByRelevanceFieldEnum | AddressOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
   export type AddressCountOrderByAggregateInput = {
     id?: SortOrder | $Types.Skip
     cep?: SortOrder | $Types.Skip
@@ -17048,6 +15603,12 @@ export namespace Prisma {
     _count?: SortOrder | $Types.Skip
   }
 
+  export type CategoryOrderByRelevanceInput = {
+    fields: CategoryOrderByRelevanceFieldEnum | CategoryOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
+  }
+
   export type CategoryCountOrderByAggregateInput = {
     id?: SortOrder | $Types.Skip
     title?: SortOrder | $Types.Skip
@@ -17079,14 +15640,20 @@ export namespace Prisma {
 
   export type EnumPaymentStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.PaymentStatus | EnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.PaymentStatus[] | $Types.Skip
+    notIn?: $Enums.PaymentStatus[] | $Types.Skip
     not?: NestedEnumPaymentStatusFilter<$PrismaModel> | $Enums.PaymentStatus | $Types.Skip
   }
 
   export type OrderNullableScalarRelationFilter = {
     is?: OrderWhereInput | null | $Types.Skip
     isNot?: OrderWhereInput | null | $Types.Skip
+  }
+
+  export type PaymentOrderByRelevanceInput = {
+    fields: PaymentOrderByRelevanceFieldEnum | PaymentOrderByRelevanceFieldEnum[]
+    sort: SortOrder
+    search: string
   }
 
   export type PaymentCountOrderByAggregateInput = {
@@ -17131,8 +15698,8 @@ export namespace Prisma {
 
   export type EnumPaymentStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.PaymentStatus | EnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.PaymentStatus[] | $Types.Skip
+    notIn?: $Enums.PaymentStatus[] | $Types.Skip
     not?: NestedEnumPaymentStatusWithAggregatesFilter<$PrismaModel> | $Enums.PaymentStatus | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedEnumPaymentStatusFilter<$PrismaModel> | $Types.Skip
@@ -17955,8 +16522,8 @@ export namespace Prisma {
 
   export type NestedStringFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: string[] | $Types.Skip
+    notIn?: string[] | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -17964,13 +16531,14 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringFilter<$PrismaModel> | string | $Types.Skip
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Date[] | string[] | $Types.Skip
+    notIn?: Date[] | string[] | $Types.Skip
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
@@ -17980,8 +16548,8 @@ export namespace Prisma {
 
   export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: string[] | $Types.Skip
+    notIn?: string[] | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -17989,6 +16557,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringWithAggregatesFilter<$PrismaModel> | string | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedStringFilter<$PrismaModel> | $Types.Skip
@@ -17997,8 +16566,8 @@ export namespace Prisma {
 
   export type NestedIntFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: number[] | $Types.Skip
+    notIn?: number[] | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18008,8 +16577,8 @@ export namespace Prisma {
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Date[] | string[] | $Types.Skip
+    notIn?: Date[] | string[] | $Types.Skip
     lt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18022,8 +16591,8 @@ export namespace Prisma {
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: number[] | $Types.Skip
+    notIn?: number[] | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18038,8 +16607,8 @@ export namespace Prisma {
 
   export type NestedFloatFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: number[] | $Types.Skip
+    notIn?: number[] | $Types.Skip
     lt?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18049,8 +16618,8 @@ export namespace Prisma {
 
   export type NestedDecimalFilter<$PrismaModel = never> = {
     equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
     lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18060,8 +16629,8 @@ export namespace Prisma {
 
   export type NestedStringNullableFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: string[] | null | $Types.Skip
+    notIn?: string[] | null | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18069,13 +16638,14 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringNullableFilter<$PrismaModel> | string | null | $Types.Skip
   }
 
   export type NestedIntNullableFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: number[] | null | $Types.Skip
+    notIn?: number[] | null | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18085,8 +16655,8 @@ export namespace Prisma {
 
   export type NestedDecimalWithAggregatesFilter<$PrismaModel = never> = {
     equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | $Types.Skip
     lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18101,8 +16671,8 @@ export namespace Prisma {
 
   export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: string | StringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: string[] | null | $Types.Skip
+    notIn?: string[] | null | $Types.Skip
     lt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18110,6 +16680,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     startsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
     endsWith?: string | StringFieldRefInput<$PrismaModel> | $Types.Skip
+    search?: string | $Types.Skip
     not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null | $Types.Skip
     _count?: NestedIntNullableFilter<$PrismaModel> | $Types.Skip
     _min?: NestedStringNullableFilter<$PrismaModel> | $Types.Skip
@@ -18118,8 +16689,8 @@ export namespace Prisma {
 
   export type NestedIntNullableWithAggregatesFilter<$PrismaModel = never> = {
     equals?: number | IntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: number[] | null | $Types.Skip
+    notIn?: number[] | null | $Types.Skip
     lt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | IntFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18134,8 +16705,8 @@ export namespace Prisma {
 
   export type NestedFloatNullableFilter<$PrismaModel = never> = {
     equals?: number | FloatFieldRefInput<$PrismaModel> | null | $Types.Skip
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel> | null | $Types.Skip
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel> | null | $Types.Skip
+    in?: number[] | null | $Types.Skip
+    notIn?: number[] | null | $Types.Skip
     lt?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
     lte?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
     gt?: number | FloatFieldRefInput<$PrismaModel> | $Types.Skip
@@ -18145,15 +16716,15 @@ export namespace Prisma {
 
   export type NestedEnumOrderStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.OrderStatus | EnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.OrderStatus[] | $Types.Skip
+    notIn?: $Enums.OrderStatus[] | $Types.Skip
     not?: NestedEnumOrderStatusFilter<$PrismaModel> | $Enums.OrderStatus | $Types.Skip
   }
 
   export type NestedEnumOrderStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.OrderStatus | EnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.OrderStatus[] | ListEnumOrderStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.OrderStatus[] | $Types.Skip
+    notIn?: $Enums.OrderStatus[] | $Types.Skip
     not?: NestedEnumOrderStatusWithAggregatesFilter<$PrismaModel> | $Enums.OrderStatus | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedEnumOrderStatusFilter<$PrismaModel> | $Types.Skip
@@ -18162,15 +16733,15 @@ export namespace Prisma {
 
   export type NestedEnumPaymentStatusFilter<$PrismaModel = never> = {
     equals?: $Enums.PaymentStatus | EnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.PaymentStatus[] | $Types.Skip
+    notIn?: $Enums.PaymentStatus[] | $Types.Skip
     not?: NestedEnumPaymentStatusFilter<$PrismaModel> | $Enums.PaymentStatus | $Types.Skip
   }
 
   export type NestedEnumPaymentStatusWithAggregatesFilter<$PrismaModel = never> = {
     equals?: $Enums.PaymentStatus | EnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    in?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
-    notIn?: $Enums.PaymentStatus[] | ListEnumPaymentStatusFieldRefInput<$PrismaModel> | $Types.Skip
+    in?: $Enums.PaymentStatus[] | $Types.Skip
+    notIn?: $Enums.PaymentStatus[] | $Types.Skip
     not?: NestedEnumPaymentStatusWithAggregatesFilter<$PrismaModel> | $Enums.PaymentStatus | $Types.Skip
     _count?: NestedIntFilter<$PrismaModel> | $Types.Skip
     _min?: NestedEnumPaymentStatusFilter<$PrismaModel> | $Types.Skip

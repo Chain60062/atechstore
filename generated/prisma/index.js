@@ -198,14 +198,62 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
-exports.Prisma.QueryMode = {
-  default: 'default',
-  insensitive: 'insensitive'
+exports.Prisma.UserOrderByRelevanceFieldEnum = {
+  cpf: 'cpf',
+  nome: 'nome'
+};
+
+exports.Prisma.ReviewOrderByRelevanceFieldEnum = {
+  title: 'title',
+  message: 'message',
+  userCPF: 'userCPF'
 };
 
 exports.Prisma.NullsOrder = {
   first: 'first',
   last: 'last'
+};
+
+exports.Prisma.ProductOrderByRelevanceFieldEnum = {
+  productName: 'productName',
+  description: 'description',
+  sku: 'sku',
+  slug: 'slug'
+};
+
+exports.Prisma.FileOrderByRelevanceFieldEnum = {
+  path: 'path'
+};
+
+exports.Prisma.OrderOrderByRelevanceFieldEnum = {
+  shippingMethod: 'shippingMethod',
+  paymentMethod: 'paymentMethod',
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.CartOrderByRelevanceFieldEnum = {
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.AddressOrderByRelevanceFieldEnum = {
+  cep: 'cep',
+  stateCode: 'stateCode',
+  city: 'city',
+  neighborhood: 'neighborhood',
+  street: 'street',
+  additionalDetails: 'additionalDetails',
+  userCPF: 'userCPF'
+};
+
+exports.Prisma.CategoryOrderByRelevanceFieldEnum = {
+  title: 'title',
+  slug: 'slug',
+  description: 'description'
+};
+
+exports.Prisma.PaymentOrderByRelevanceFieldEnum = {
+  paymentMethod: 'paymentMethod',
+  userCPF: 'userCPF'
 };
 exports.PaymentStatus = exports.$Enums.PaymentStatus = {
   NEW: 'NEW',
@@ -277,7 +325,7 @@ const config = {
   "datasourceNames": [
     "db"
   ],
-  "activeProvider": "postgresql",
+  "activeProvider": "mysql",
   "postinstall": false,
   "inlineDatasources": {
     "db": {
@@ -287,8 +335,8 @@ const config = {
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"strictUndefinedChecks\"]\n  output          = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"postgresql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  cpf              String    @id\n  nome             String\n  dataDeNascimento DateTime\n  orders           Order[]\n  payments         Payment[]\n  reviews          Review[]\n  addresses        Address[]\n  createdAt        DateTime  @default(now())\n  updatedAt        DateTime  @updatedAt\n  cart             Cart?\n\n  @@map(\"users\")\n}\n\nmodel Review {\n  id        Int      @id @default(autoincrement())\n  title     String\n  message   String\n  rating    Int\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  user      User    @relation(fields: [userCPF], references: [cpf])\n  userCPF   String\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"reviews\")\n}\n\nmodel Product {\n  id             Int      @id @default(autoincrement())\n  productName    String\n  price          Decimal\n  description    String?\n  sku            String?\n  availableUnits Int\n  slug           String   @unique\n  updatedAt      DateTime @updatedAt\n\n  category   Category?   @relation(fields: [categoryId], references: [id])\n  categoryId Int?\n  review     Review[]\n  orderItem  OrderItem[]\n  cartItem   CartItem[]\n  images     File[]\n\n  @@map(\"products\")\n}\n\nmodel File {\n  id        Int      @id @default(autoincrement())\n  path      String\n  Product   Product? @relation(fields: [productId], references: [id])\n  productId Int?\n\n  @@map(\"files\")\n}\n\nmodel Order {\n  id             Int         @id @default(autoincrement())\n  total          Decimal\n  shippingCost   Decimal\n  shippingMethod String\n  paymentMethod  String\n  status         OrderStatus\n  createdAt      DateTime    @default(now())\n  updatedAt      DateTime    @updatedAt\n\n  user              User        @relation(fields: [userCPF], references: [cpf])\n  userCPF           String\n  shippingAddress   Address     @relation(fields: [shippingAddressId], references: [id])\n  shippingAddressId Int\n  orderItems        OrderItem[]\n  payment           Payment?\n\n  @@map(\"orders\")\n}\n\nmodel OrderItem {\n  id       Int @id @default(autoincrement())\n  quantity Int\n\n  order     Order   @relation(fields: [orderId], references: [id])\n  orderId   Int\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"order_items\")\n}\n\nmodel Cart {\n  id      Int    @id @default(autoincrement())\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String @unique\n\n  cartItems CartItem[]\n\n  @@map(\"carts\")\n}\n\nmodel CartItem {\n  id       Int @id @default(autoincrement())\n  quantity Int\n\n  cart      Cart    @relation(fields: [cartId], references: [id])\n  cartId    Int\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"cart_items\")\n}\n\nmodel Address {\n  id                Int     @id @default(autoincrement())\n  cep               String\n  stateCode         String\n  city              String\n  neighborhood      String\n  street            String\n  number            Int\n  additionalDetails String?\n  Order             Order[]\n\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String\n\n  @@map(\"addresses\")\n}\n\nmodel Category {\n  id          Int     @id @default(autoincrement())\n  title       String\n  slug        String  @unique\n  description String?\n\n  products Product[]\n\n  @@map(\"categories\")\n}\n\nmodel Payment {\n  id            Int           @id @default(autoincrement())\n  status        PaymentStatus\n  paymentMethod String\n  createdAt     DateTime      @default(now())\n  updatedAt     DateTime      @updatedAt\n\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String\n  order   Order? @relation(fields: [orderId], references: [id])\n  orderId Int    @unique\n\n  @@map(\"payments\")\n}\n\nenum PaymentStatus {\n  NEW\n  PENDING\n  CANCELLED\n  DECLINED\n  SUCCESS\n}\n\nenum OrderStatus {\n  PENDING\n  CONFIRMED\n  SHIPPED\n  DELIVERED\n  CANCELLED\n  RETURNED\n}\n",
-  "inlineSchemaHash": "1a3aa06a66b3d4c03cfbcf8a8c238fb6186ff1bac0dab5ee1cd9634114cc2bfc",
+  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider        = \"prisma-client-js\"\n  previewFeatures = [\"strictUndefinedChecks\"]\n  output          = \"../generated/prisma\"\n}\n\ndatasource db {\n  provider = \"mysql\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel User {\n  cpf              String    @id\n  nome             String\n  dataDeNascimento DateTime\n  orders           Order[]\n  payments         Payment[]\n  reviews          Review[]\n  addresses        Address[]\n  createdAt        DateTime  @default(now())\n  updatedAt        DateTime  @updatedAt\n  cart             Cart?\n\n  @@map(\"users\")\n}\n\nmodel Review {\n  id        Int      @id @default(autoincrement())\n  title     String\n  message   String\n  rating    Int\n  createdAt DateTime @default(now())\n  updatedAt DateTime @updatedAt\n\n  user      User    @relation(fields: [userCPF], references: [cpf])\n  userCPF   String\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"reviews\")\n}\n\nmodel Product {\n  id             Int      @id @default(autoincrement())\n  productName    String\n  price          Decimal\n  description    String?\n  sku            String?\n  availableUnits Int\n  slug           String   @unique\n  updatedAt      DateTime @updatedAt\n\n  category   Category?   @relation(fields: [categoryId], references: [id])\n  categoryId Int?\n  review     Review[]\n  orderItem  OrderItem[]\n  cartItem   CartItem[]\n  images     File[]\n\n  @@map(\"products\")\n}\n\nmodel File {\n  id        Int      @id @default(autoincrement())\n  path      String\n  Product   Product? @relation(fields: [productId], references: [id])\n  productId Int?\n\n  @@map(\"files\")\n}\n\nmodel Order {\n  id             Int         @id @default(autoincrement())\n  total          Decimal\n  shippingCost   Decimal\n  shippingMethod String\n  paymentMethod  String\n  status         OrderStatus\n  createdAt      DateTime    @default(now())\n  updatedAt      DateTime    @updatedAt\n\n  user              User        @relation(fields: [userCPF], references: [cpf])\n  userCPF           String\n  shippingAddress   Address     @relation(fields: [shippingAddressId], references: [id])\n  shippingAddressId Int\n  orderItems        OrderItem[]\n  payment           Payment?\n\n  @@map(\"orders\")\n}\n\nmodel OrderItem {\n  id       Int @id @default(autoincrement())\n  quantity Int\n\n  order     Order   @relation(fields: [orderId], references: [id])\n  orderId   Int\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"order_items\")\n}\n\nmodel Cart {\n  id      Int    @id @default(autoincrement())\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String @unique\n\n  cartItems CartItem[]\n\n  @@map(\"carts\")\n}\n\nmodel CartItem {\n  id       Int @id @default(autoincrement())\n  quantity Int\n\n  cart      Cart    @relation(fields: [cartId], references: [id])\n  cartId    Int\n  product   Product @relation(fields: [productId], references: [id])\n  productId Int\n\n  @@map(\"cart_items\")\n}\n\nmodel Address {\n  id                Int     @id @default(autoincrement())\n  cep               String\n  stateCode         String\n  city              String\n  neighborhood      String\n  street            String\n  number            Int\n  additionalDetails String?\n  Order             Order[]\n\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String\n\n  @@map(\"addresses\")\n}\n\nmodel Category {\n  id          Int     @id @default(autoincrement())\n  title       String\n  slug        String  @unique\n  description String?\n\n  products Product[]\n\n  @@map(\"categories\")\n}\n\nmodel Payment {\n  id            Int           @id @default(autoincrement())\n  status        PaymentStatus\n  paymentMethod String\n  createdAt     DateTime      @default(now())\n  updatedAt     DateTime      @updatedAt\n\n  user    User   @relation(fields: [userCPF], references: [cpf])\n  userCPF String\n  order   Order? @relation(fields: [orderId], references: [id])\n  orderId Int    @unique\n\n  @@map(\"payments\")\n}\n\nenum PaymentStatus {\n  NEW\n  PENDING\n  CANCELLED\n  DECLINED\n  SUCCESS\n}\n\nenum OrderStatus {\n  PENDING\n  CONFIRMED\n  SHIPPED\n  DELIVERED\n  CANCELLED\n  RETURNED\n}\n",
+  "inlineSchemaHash": "310e1e67ade027beedf912908a0472a2a8d75a255bf8a30943ec68b62cf6bf96",
   "copyEngine": true
 }
 
