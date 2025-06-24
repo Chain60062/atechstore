@@ -1,0 +1,20 @@
+@baseUrl = http://localhost:3000/api/orders
+### Criar pedido a partir do carrinho
+POST {{baseUrl}}/12345678910
+Content-Type: application/json
+
+{
+  "paymentMethod": "CREDIT_CARD",
+  "shippingAddressId": 2,
+  "shippingCost": 15.50,
+  "shippingMethod": "Sedex"
+}
+
+### Listar todos os pedidos de um usuário
+GET {{baseUrl}}/12345678900
+
+### Listar todos os itens de um pedido
+GET {{baseUrl}}/items/1
+
+### Cancelar pedido
+PATCH {{baseUrl}}/cancel/1

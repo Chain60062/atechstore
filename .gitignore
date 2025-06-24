@@ -17,3 +17,5 @@
 **/*.sw?
 **/.env
 **/uploads/
+**/dist
+**/build

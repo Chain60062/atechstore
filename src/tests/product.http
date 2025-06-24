@@ -1,0 +1,33 @@
+@baseUrl = http://localhost:3000/api/products
+
+### Criar um novo produto
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+  "productName": "Notebook Lenovo",
+  "price": 3500.00,
+  "description": "Notebook para uso profissional e pessoal",
+  "sku": "LEN-NTB-001",
+  "availableUnits": 10,
+  "slug": "notebook-lenovo",
+  "categoryId": 2
+}
+
+### Buscar todos os produtos
+GET {{baseUrl}}
+
+### Buscar produto pelo ID
+GET {{baseUrl}}/2
+
+### Atualizar produto pelo ID
+PUT {{baseUrl}}/2
+Content-Type: application/json
+
+{
+  "productName": "Notebook Lenovo IdeaPad",
+  "price": 3600.00
+}
+
+### Deletar produto pelo ID
+DELETE {{baseUrl}}/2

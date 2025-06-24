@@ -1,0 +1,48 @@
+@baseUrl = http://localhost:3000/api
+
+### Criar usuário (necessário para testar pagamentos)
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "cpf": "99988877766",
+  "nome": "Pagamento Tester",
+  "dataDeNascimento": "2002-03-24T00:00:00.000Z"
+}
+
+### Criar um pagamento para um pedido
+POST {{baseUrl}}/payments
+Content-Type: application/json
+
+{
+  "paymentMethod": "credit_card",
+  "status": "PENDING",
+  "userCPF": "99988877766",
+  "orderId": 1
+}
+
+
+### Buscar todos os pagamentos de um usuário CPF
+GET {{baseUrl}}/payments/user/99988877766
+
+### Buscar pelo orderID
+GET {{baseUrl}}/payments/order/1
+
+### Buscar por status
+POST {{baseUrl}}/payments/status
+Content-Type: application/json
+
+{
+  "status": "PENDING"
+}
+
+### Atualizar pagamento
+PUT {{baseUrl}}/payments/1
+Content-Type: application/json
+
+{
+  "status": "COMPLETED"
+}
+
+### Delete payment
+DELETE {{baseUrl}}/payments/1

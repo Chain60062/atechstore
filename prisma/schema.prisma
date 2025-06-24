@@ -1,0 +1,190 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["strictUndefinedChecks"]
+  output          = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  cpf              String    @id
+  nome             String
+  dataDeNascimento DateTime
+  orders           Order[]
+  payments         Payment[]
+  reviews          Review[]
+  addresses        Address[]
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+  cart             Cart?
+
+  @@map("users")
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  title     String
+  message   String
+  rating    Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User    @relation(fields: [userCPF], references: [cpf])
+  userCPF   String
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("reviews")
+}
+
+model Product {
+  id             Int      @id @default(autoincrement())
+  productName    String
+  price          Decimal
+  description    String?
+  sku            String?
+  availableUnits Int
+  slug           String   @unique
+  updatedAt      DateTime @updatedAt
+
+  category   Category?   @relation(fields: [categoryId], references: [id])
+  categoryId Int?
+  review     Review[]
+  orderItem  OrderItem[]
+  cartItem   CartItem[]
+  images     File[]
+
+  @@map("products")
+}
+
+model File {
+  id        Int      @id @default(autoincrement())
+  path      String
+  Product   Product? @relation(fields: [productId], references: [id])
+  productId Int?
+
+  @@map("files")
+}
+
+model Order {
+  id             Int         @id @default(autoincrement())
+  total          Decimal
+  shippingCost   Decimal
+  shippingMethod String
+  paymentMethod  String
+  status         OrderStatus
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  user              User        @relation(fields: [userCPF], references: [cpf])
+  userCPF           String
+  shippingAddress   Address     @relation(fields: [shippingAddressId], references: [id])
+  shippingAddressId Int
+  orderItems        OrderItem[]
+  payment           Payment?
+
+  @@map("orders")
+}
+
+model OrderItem {
+  id Int @id @default(autoincrement())
+  quantity  Int
+
+  order     Order   @relation(fields: [orderId], references: [id])
+  orderId   Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("order_items")
+}
+
+model Cart {
+  id      Int    @id @default(autoincrement())
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String @unique
+
+  cartItems CartItem[]
+
+  @@map("carts")
+}
+
+model CartItem {
+  id        Int     @id @default(autoincrement())
+  quantity  Int
+
+  cart      Cart    @relation(fields: [cartId], references: [id])
+  cartId    Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+
+  @@map("cart_items")
+}
+
+model Address {
+  id                Int     @id @default(autoincrement())
+  cep               String
+  stateCode         String
+  city              String
+  neighborhood      String
+  street            String
+  number            Int
+  additionalDetails String?
+  Order             Order[]
+
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String
+
+  @@map("addresses")
+}
+
+model Category {
+  id          Int     @id @default(autoincrement())
+  title       String
+  slug        String  @unique
+  description String?
+
+  products Product[]
+
+  @@map("categories")
+}
+
+model Payment {
+  id            Int           @id @default(autoincrement())
+  status        PaymentStatus
+  paymentMethod String
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+
+  user    User   @relation(fields: [userCPF], references: [cpf])
+  userCPF String
+  order   Order? @relation(fields: [orderId], references: [id])
+  orderId Int    @unique
+
+  @@map("payments")
+}
+
+enum PaymentStatus {
+  NEW
+  PENDING
+  CANCELLED
+  DECLINED
+  SUCCESS
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
+}
